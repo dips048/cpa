@@ -1,5 +1,12 @@
 import React from "react"
+import Layout from "../components/layout"
 
-export default function Home() {
-  return <div>Hello world!</div>
+const IndexPage = () => {
+  return (
+    <Layout>
+      <div>Hello world!</div>
+    </Layout>
+  )
 }
+
+export default IndexPage
