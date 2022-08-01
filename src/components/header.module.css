@@ -1,0 +1,18 @@
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: end;
+}
+
+.nav-link-item {
+  padding-right: 1rem;
+}
+
+.nav-link-text {
+  color: black;
+}
+
+.nav-link-container {
+  display: flex;
+  justify-content: space-between;
+}
