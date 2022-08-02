@@ -7,7 +7,33 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Gatsby blog",
+    title: "CPA Solutions",
+    menuLinks: [
+      {
+        name: `Home`,
+        url: `/`,
+      },
+      {
+        name: `About`,
+        url: `/about`,
+      },
+      {
+        name: `Services`,
+        url: `/services`,
+      },
+      {
+        name: `Tax Center`,
+        url: `/tax-center`,
+      },
+      {
+        name: `Resources`,
+        url: `/resources`,
+      },
+      {
+        name: `Contact`,
+        url: `/contact`,
+      },
+    ],
   },
   plugins: [
     {

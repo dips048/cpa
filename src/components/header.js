@@ -6,31 +6,16 @@ import {
   navLinkText,
   navLinkContainer,
 } from "./header.module.css"
-import { useStaticQuery, graphql } from "gatsby"
 
-const Header = ({ companyName }) => {
-  const markdowns = useStaticQuery(graphql`
-    query {
-      allMdx {
-        nodes {
-          frontmatter {
-            title
-          }
-          slug
-          id
-        }
-      }
-    }
-  `)
-
+const Header = ({ companyName, menuLinks }) => {
   return (
     <nav className={navLinkContainer}>
       <h1>{companyName}</h1>
       <ul className={navLinks}>
-        {markdowns.allMdx.nodes.map(node => (
-          <li className={navLinkItem} key={node.id}>
-            <Link to={"/" + node.slug} className={navLinkText}>
-              {node.frontmatter.title}
+        {menuLinks.map(menuLink => (
+          <li className={navLinkItem} key={menuLink.name}>
+            <Link to={menuLink.url} className={navLinkText}>
+              {menuLink.name}
             </Link>
           </li>
         ))}
