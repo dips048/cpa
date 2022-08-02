@@ -3,6 +3,7 @@ import FooterCard from "./footer-card"
 import FooterNav from "./footer-nav"
 import { container } from "./footer.module.css"
 import Newsletter from "./newsletter"
+import { Container } from "react-bootstrap"
 
 const data = [
   {
@@ -32,19 +33,21 @@ const data = [
 ]
 
 const Footer = () => (
-  <footer>
-    <div className={container}>
-      {data.map((card, i) => (
-        <FooterCard key={i} card={card} />
-      ))}
-    </div>
-    <div className={container}>
-      <Newsletter />
-    </div>
-    <div className={container}>
-      <FooterNav />
-    </div>
-  </footer>
+  <Container>
+    <footer>
+      <div className={container}>
+        {data.map((card, i) => (
+          <FooterCard key={i} card={card} />
+        ))}
+      </div>
+      <div className={container}>
+        <Newsletter />
+      </div>
+      <div className={container}>
+        <FooterNav />
+      </div>
+    </footer>
+  </Container>
 )
 
 export default Footer
