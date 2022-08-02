@@ -43,7 +43,7 @@ const FooterNav = () => {
           <ul className={navLinks}>
             <h4>{card.heading}</h4>
             {card.links.map((link, j) => (
-              <li>
+              <li key={j}>
                 <Link to={"/" + link}>{link}</Link>
               </li>
             ))}

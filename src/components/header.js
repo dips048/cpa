@@ -9,15 +9,12 @@ import {
 import { useStaticQuery, graphql } from "gatsby"
 
 const Header = ({ companyName }) => {
-  const links = useStaticQuery(graphql`
+  const markdowns = useStaticQuery(graphql`
     query {
       allMdx {
         nodes {
           frontmatter {
             title
-            date
-            image
-            keywords
           }
           slug
           id
@@ -30,7 +27,7 @@ const Header = ({ companyName }) => {
     <nav className={navLinkContainer}>
       <h1>{companyName}</h1>
       <ul className={navLinks}>
-        {links.allMdx.nodes.map(node => (
+        {markdowns.allMdx.nodes.map(node => (
           <li className={navLinkItem} key={node.id}>
             <Link to={"/" + node.slug} className={navLinkText}>
               {node.frontmatter.title}

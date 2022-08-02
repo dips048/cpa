@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
+import woman from "../images/woman-1.png"
 
 const Page = ({ data }) => {
   return (
@@ -14,10 +15,10 @@ const Page = ({ data }) => {
         <div class="text-center postion-sticky-top">
           <img
             style={{ margin: "0 auto" }}
-            width="260px"
-            height="400px"
-            src="../images/woman-1.png"
-            alt="image-1"
+            width={'260px'}
+            height={'400px'}
+            src={woman}
+            alt="woman"
           />
           <button>Request A Free Consultation</button>
         </div>
@@ -32,7 +33,6 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
-        date(formatString: "MMMM D, YYYY")
       }
       body
     }
