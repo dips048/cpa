@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import {
   navLinkText,
-} from "./header.module.scss"
+} from "./dropdown.module.scss"
 
 const Dropdown = ({ menuLinks }) => (
   <ul>
