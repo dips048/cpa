@@ -1,0 +1,82 @@
+.coffee {
+  position: relative;
+  max-width: 512px;
+  height: 494px;
+  margin: 0 auto;
+}
+
+.coffee img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-left: -256px;
+}
+
+.img-scroll {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+  margin-left: -168px;
+  overflow: hidden;
+  height: 335px;
+  width: 335px;
+  border-radius: 175px;
+}
+
+.img-scroll .slide {
+  background-image: url("../../images/slide.png");
+  height: 335px;
+  width: 1695px;
+}
+
+.pattern-1 {
+    background-image: url("../../images/pattern-1.svg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .1;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .globe {
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    opacity: .15;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .globe-1, .globe-2, .globe-3, .globe-4 {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    z-index: 0;
+  }
+  
+  .globe-1 {
+    background-image: url("../../images/globe-1.svg");
+    opacity: .7;
+  }
+  
+  .globe-2 {
+    background-image: url("../../images/globe-2.svg");
+    opacity: .3;
+  }
+  
+  .globe-3 {
+    background-image: url("../../images/globe-3.svg");
+  }
+  
+  .globe-4 {
+    background-image: url("../../images/globe-4.svg");
+    opacity: .5;
+  }
