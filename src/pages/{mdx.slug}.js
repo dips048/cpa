@@ -2,15 +2,24 @@ import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
+import Heading from "../components/heading"
 import woman from "../images/woman-1.png"
+import Breadcrumb from "react-bootstrap/Breadcrumb"
+import { Container } from "react-bootstrap"
 
 const Page = ({ data }) => {
   return (
     <Layout>
-      <div>
-        <h1 style={{ margin: "1rem 2rem" }}>{data.mdx.frontmatter.title}</h1>
-      </div>
-      <div style={{}}>
+      <Container>
+        <Breadcrumb>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item active href={"/" + data.mdx.frontmatter.url}>
+            {data.mdx.frontmatter.title}
+          </Breadcrumb.Item>
+        </Breadcrumb>
+      </Container>
+      <Heading title={data.mdx.frontmatter.title}/>
+      <div style={{zIndex: 1}}>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </div>
       <div style={{}}>
@@ -34,6 +43,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        url
       }
       body
     }
