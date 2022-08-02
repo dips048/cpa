@@ -5,13 +5,32 @@ import {
   navLinkItem,
   navLinkText,
   navLinkContainer,
-} from "./header.module.css"
+} from "./header.module.scss"
+import Dropdown from "./dropdown"
 
 const Header = ({ companyName, menuLinks }) => {
   return (
     <nav className={navLinkContainer}>
       <h1>{companyName}</h1>
-      <ul className={navLinks}>
+      <Dropdown menuLinks={menuLinks}></Dropdown>
+      {/* <ul>
+        {menuLinks.map(menuLink => (
+          <li>
+            <Link to={menuLink.url} className={navLinkText}>
+              {menuLink.name}
+            </Link>
+            <ul>
+              {menuLink.subLinks?.map(link => (
+                <Link to={menuLink.url + link.url} className={navLinkText}>
+                  {link.name}
+                </Link>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul> */}
+
+      {/* <ul className={navLinks}>
         {menuLinks.map(menuLink => (
           <li className={navLinkItem} key={menuLink.name}>
             <Link to={menuLink.url} className={navLinkText}>
@@ -19,7 +38,7 @@ const Header = ({ companyName, menuLinks }) => {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </nav>
   )
 }
