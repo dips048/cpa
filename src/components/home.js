@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Container } from "react-bootstrap"
-import woman from "../../images/woman-1.png"
+import woman from "../images/woman-1.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faBriefcase,
@@ -9,7 +9,7 @@ import {
   faCalculator,
 } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
-import coffeeImage from "../../images/coffee.png"
+import coffeeImage from "../images/coffee.png"
 import { coffee, imgScroll, slide, pattern1, globe, globe1, globe2, globe3, globe4 } from "./home.module.scss"
 
 const Home = () => (
