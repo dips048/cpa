@@ -1,48 +1,50 @@
-
 .nav-link-text {
   color: black;
 }
 
-ul {
-  // margin-left: 2%;
-  // border-left: 1px solid rgba(0,0,0,0.2);
+.link-container {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  .link-item {
+    float: left;
+  }
 }
-ul li {
-  float: left;
-}
-ul li a {
+
+.link-container .link-item a {
   display: block;
   border: none;
   // border-right: 1px solid rgba(0,0,0,0.2);
   background: none;
-  font-size: 0.9em;
+  // font-size: 0.9em;
   padding: 0.7em 0.9em;
-  color: rgba(255, 255, 255, 1);
+  // color: rgba(255, 255, 255, 1);
   text-decoration: none;
 }
-ul li a:hover {
+
+.link-container .link-item a:hover {
   background: rgb(216, 216, 216);
 }
 
-ul li ul {
+.link-container .link-item .sub-link-container {
   /*rules for the sub menu items*/
   z-index: 99;
   position: absolute;
   background-color: rgb(235, 235, 235);
   left: -999em; /* pushes the menu way off to the side */
-  width: 10em;
+  width: auto;
+  padding: 0;
 }
-ul li ul li {
+
+.link-container .link-item ul li {
   /* overides the float and line from the parent ul */
   float: none;
   border-right: none;
   border-top: solid 1px rgba(0, 0, 0, 0.2);
 }
 
-ul li:hover ul {
+.link-container .link-item:hover .sub-link-container {
   /* this displays the menus as drop downs  */
   left: auto;
   margin-left: 0;
