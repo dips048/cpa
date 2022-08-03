@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 import Offcanvas from "react-bootstrap/Offcanvas"
+import { Container } from "react-bootstrap"
 
 const List = ({ menuLinks }) => {
   return (
@@ -33,10 +34,10 @@ const List = ({ menuLinks }) => {
                           {link3.name}
                         </Link>
                         <ul style={{ listStyle: "none", padding: 0 }}>
-                          {link3.subLinks?.map((link4, k) => (
+                          {link3.subLinks?.map((link4, l) => (
                             <li
                               style={{ padding: ".5rem 1rem" }}
-                              key={link4.url + "-" + k}
+                              key={link4.url + "-" + l}
                             >
                               <Link to={link1.url + link2.url + link3.url + link4.url}>
                                 {link4.name}
@@ -64,7 +65,7 @@ const Header = ({ companyName, menuLinks }) => {
   const handleShow = () => setShow(true)
 
   return (
-    <div style={{ zIndex: 1 }}>
+    <Container style={{ zIndex: 1 }}>
       <div className="d-flex justify-content-between d-lg-none py-2">
         <FontAwesomeIcon
           className="flex-grow-1"
@@ -113,7 +114,7 @@ const Header = ({ companyName, menuLinks }) => {
           <Dropdown menuLinks={menuLinks}></Dropdown>
         </div>
       </nav>
-    </div>
+    </Container>
   )
 }
 

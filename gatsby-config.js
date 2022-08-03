@@ -96,7 +96,7 @@ module.exports = {
               },
               {
                 name: "Part-Time CFO Services",
-                url: "/part-time-CFO-services",
+                url: "/part-time-cfo-services",
                 subLinks: [],
               },
               {

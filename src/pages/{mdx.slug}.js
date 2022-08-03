@@ -13,27 +13,43 @@ const Page = ({ data }) => {
       <Container>
         <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          {/* {console.log(data.mdx.frontmatter.url.split("/"))}
+          {data.mdx.frontmatter.url.split("/").map((link, i) => (
+            <Breadcrumb.Item href={"/" + link}>
+              {data.mdx.frontmatter.title}
+            </Breadcrumb.Item>
+          ))} */}
           <Breadcrumb.Item active href={"/" + data.mdx.frontmatter.url}>
             {data.mdx.frontmatter.title}
           </Breadcrumb.Item>
         </Breadcrumb>
       </Container>
-      <Heading title={data.mdx.frontmatter.title}/>
-      <div style={{zIndex: 1}}>
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      </div>
-      <div style={{}}>
-        <div class="text-center postion-sticky-top">
-          <img
-            style={{ margin: "0 auto" }}
-            width={"260px"}
-            height={"400px"}
-            src={woman}
-            alt="woman"
-          />
-          <button>Request A Free Consultation</button>
+      <Heading title={data.mdx.frontmatter.title} />
+      <Container className="position-relative">
+        <div className="row my-5">
+          <div className="col-md-7">
+            
+            {" "}
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          </div>
+          <div className="col-md-1"></div>
+          <div className="col-md-4 d-none d-md-block">
+            <div
+              className="text-center"
+              style={{ position: "sticky", top: "0" }}
+            >
+              <img
+                style={{ margin: "0 auto" }}
+                width={"260px"}
+                height={"400px"}
+                src={woman}
+                alt="woman"
+              />
+              <button>Request A Free Consultation</button>
+            </div>
+          </div>
         </div>
-      </div>
+      </Container>
     </Layout>
   )
 }
