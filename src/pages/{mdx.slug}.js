@@ -28,9 +28,62 @@ const Page = ({ data }) => {
       <Container className="position-relative">
         <div className="row my-5">
           <div className="col-md-7">
-            
             {" "}
             <MDXRenderer>{data.mdx.body}</MDXRenderer>
+            {data.mdx.frontmatter.useForm && (
+              <div className="mx-auto" style={{ maxWidth: "400px" }}>
+                <form>
+                  <div className="mb-3">
+                    <label for="" className="form-label">
+                      Name
+                    </label>
+                    <input type="text" className="form-control" />
+                  </div>
+                  <div className="mb-3">
+                    <label for="" className="form-label">
+                      Email address
+                    </label>
+                    <input type="email" className="form-control" />
+                  </div>
+                  <div className="mb-3">
+                    <label for="" className="form-label">
+                      Phone Number
+                    </label>
+                    <input type="text" className="form-control" />
+                  </div>
+                  <div className="mb-3">
+                    <label for="" className="form-label">
+                      Best Time To Call
+                    </label>
+                    <input type="email" className="form-control" />
+                  </div>
+                  <div className="mb-3">
+                    <label for="">Comments</label>
+                    <textarea
+                      className="form-control"
+                      placeholder="Leave a comment here"
+                    ></textarea>
+                  </div>
+                  <div className="mb-3 form-check">
+                    <input type="checkbox" className="form-check-input" />
+                    <label className="form-check-label" for="">
+                      CAPTCHA Image
+                    </label>
+                  </div>
+                  <div className="mb-3">
+                    <input type="" className="form-control" />
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <a id="captcha_refresh" href="#">
+                      [ Show a different Image ]
+                    </a>
+                    <button type="submit" className="btn btn-primary">
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </div>
+            )}
           </div>
           <div className="col-md-1"></div>
           <div className="col-md-4 d-none d-md-block">
@@ -60,6 +113,7 @@ export const query = graphql`
       frontmatter {
         title
         url
+        useForm
       }
       body
     }
