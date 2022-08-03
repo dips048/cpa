@@ -10,16 +10,32 @@ module.exports = {
     title: "CPA Solutions",
     menuLinks: [
       {
-        name: `Home`,
-        url: `/`,
+        name: "Home",
+        url: "/",
+        subLinks: [],
       },
       {
-        name: `About`,
-        url: `/about`,
+        name: "About",
+        url: "/about",
         subLinks: [
           {
-            name: `Our Values`,
-            url: `/our-values`,
+            name: "Our Values",
+            url: "/our-values",
+            subLinks: [],
+          },
+          {
+            name: "client Reviews",
+            url: "/client-reviews",
+            subLinks: [],
+          },
+          {
+            name: "Employment Opportunities",
+            url: "/employment-opportunities",
+            subLinks: [],
+          },
+          {
+            name: "Blog",
+            url: "/blog",
             subLinks: [],
           },
         ],
@@ -35,29 +51,29 @@ module.exports = {
               {
                 name: "Personal Financial Planning",
                 url: "/personal-financial-planning",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Retirement Planning",
                 url: "/retirement-planning",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Estate Planning",
                 url: "/estate-planning",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Elder Care",
                 url: "/elder-care",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Wealth Management",
                 url: "/wealth-management",
-                subLinks: []
-              }
-            ]
+                subLinks: [],
+              },
+            ],
           },
           {
             name: "Business Services",
@@ -66,84 +82,84 @@ module.exports = {
               {
                 name: "Small Business Accounting",
                 url: "/small-business-accounting",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Book Keeping Services",
                 url: "/book-keeping-services",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Payroll",
                 url: "/payroll",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Part-Time CFO Services",
                 url: "/part-time-CFO-services",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Audits-Reviews-Compilations",
                 url: "/audits-reviews-compilations",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Forensic Accounting",
                 url: "/forensic-accounting",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Cash Flow Management",
                 url: "/cash-flow-management",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Bank Financing",
                 url: "/bank-financing",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Business Valuation",
                 url: "/business-valuation",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Business Advisory Services",
                 url: "/business-advisory-services",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Financial Planning for Businesses",
                 url: "/financial-planning-for-businesses",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Succession Planning",
                 url: "/succession-planning",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "New Business Formation",
                 url: "/new-business-formation",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Non-Profit Organizations",
                 url: "/non-profit-organizations",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Internal Controls",
                 url: "/internal-controls",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Litigation Support",
                 url: "/litigation-support",
-                subLinks: []
-              }
-            ]
+                subLinks: [],
+              },
+            ],
           },
           {
             name: "Tax Services",
@@ -152,22 +168,22 @@ module.exports = {
               {
                 name: "Individual Tax Preparation",
                 url: "/individual-tax-preparation",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Tax Preparation For Business",
                 url: "/tax-preparation-for-business",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Tax Planning",
                 url: "/tax-planning",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Estate & Trust Tax Services",
                 url: "/estate-trust-tax-services",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Tax Relief",
@@ -176,71 +192,71 @@ module.exports = {
                   {
                     name: "IRS Audit Representation",
                     url: "/irs-audit-representation",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "Non-Filed Tax Returns",
                     url: "/non-filed-tax-returns",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "Back Taxes Owed",
                     url: "/back-taxes-owed",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "Payroll Tax Problems",
                     url: "/payroll-tax-problems",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "IRS Liens",
                     url: "/IRS-liens",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "IRS Levies",
                     url: "/IRS-levies",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "IRS Wage Garnishment",
                     url: "/IRS-wage-garnishment",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "IRS Seizures",
                     url: "/IRS-seizures",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "IRS Payment Plan",
                     url: "/IRS-payment-plan",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "Offer In Compromise",
                     url: "/offer-in-compromise",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "Bankruptcy",
                     url: "/bankruptcy",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "Innocent Spouse Relief",
                     url: "/innocent-spouse-relief",
-                    subLinks: []
+                    subLinks: [],
                   },
                   {
                     name: "Get Your IRS File",
                     url: "/get-your-IRS-file",
-                    subLinks: []
-                  }
-                ]
-              }
-            ]
+                    subLinks: [],
+                  },
+                ],
+              },
+            ],
           },
           {
             name: "Services For QuickBooks",
@@ -249,34 +265,34 @@ module.exports = {
               {
                 name: "Why QuickBooks",
                 url: "/why-quick-books",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Setup for QuickBooks",
                 url: "/setup-quick-books",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Training For QuickBooks",
                 url: "/training-quick-books",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Answers To QuickBooks",
                 url: "/answers-to-quick-books",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Tune-up For QuickBooks",
                 url: "/tune-up-quick-books",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Tips For QuickBooks Users",
                 url: "/tips-quick-books",
-                subLinks: []
-              }
-            ]
+                subLinks: [],
+              },
+            ],
           },
           {
             name: "Industries",
@@ -285,53 +301,160 @@ module.exports = {
               {
                 name: "Construction",
                 url: "/construction",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Dentists",
                 url: "/dentists",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Healthcare",
                 url: "/healthcare",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Hospitality",
                 url: "/hospitality",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Law Firms",
                 url: "/law-firms",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Manufacturers",
                 url: "/manufacturers",
-                subLinks: []
+                subLinks: [],
               },
               {
                 name: "Real Estate",
                 url: "/real-estate",
-                subLinks: []
-              }
-            ]
-          }
-        ]
+                subLinks: [],
+              },
+            ],
+          },
+        ],
       },
       {
-        name: `Tax Center`,
-        url: `/tax-center`,
+        name: "Tax Center",
+        url: "/tax-center",
+        subLinks: [
+          {
+            name: "Track Your Refund",
+            url: "/track-your-refund",
+            subLinks: [],
+          },
+          {
+            name: "Tax Due Dates",
+            url: "/tax-due-dates",
+            subLinks: [],
+          },
+          {
+            name: "Tax Rates",
+            url: "/tax-rates",
+            subLinks: [],
+          },
+          {
+            name: "IRS Tax Forms and Publications",
+            url: "/irs-tax-forms-publications",
+            subLinks: [],
+          },
+          {
+            name: "Record Retention Guide",
+            url: "/record-retention-guide",
+            subLinks: [],
+          },
+          {
+            name: "State Tax Forms",
+            url: "/state-tax-forms",
+            subLinks: [],
+          },
+        ],
       },
       {
-        name: `Resources`,
-        url: `/resources`,
+        name: "Resources",
+        url: "/resources",
+        subLinks: [
+          {
+            name: "Newsletter",
+            url: "/newsletter",
+            subLinks: [
+              {
+                name: "This Months Newsletter",
+                url: "/newsletter",
+                subLinks: [],
+              },
+              {
+                name: "Previous Newsletter",
+                url: "/previous-newsletter",
+                subLinks: [],
+              },
+            ],
+          },
+          {
+            name: "Guides",
+            url: "/guides",
+            subLinks: [
+              {
+                name: "Life Events",
+                url: "/life-events",
+                subLinks: [],
+              },
+              {
+                name: "Business Strategies",
+                url: "/business-strategies",
+                subLinks: [],
+              },
+              {
+                name: "Investment Strategies",
+                url: "/investment-strategies",
+                subLinks: [],
+              },
+              {
+                name: "Tax Strategies for Business Owners",
+                url: "/tax-strategies-business-owners",
+                subLinks: [],
+              },
+              {
+                name: "Tax Strategies for Individuals",
+                url: "/tax-strategies-individuals",
+                subLinks: [],
+              },
+              {
+                name: "Frequently Asked Questions",
+                url: "/frequently-asked-questions",
+                subLinks: [],
+              },
+            ],
+          },
+          {
+            name: "Financial Calculators",
+            url: "/financial-calculators",
+            subLinks: [],
+          },
+          {
+            name: "Client Portal",
+            url: "/client-portal",
+            subLinks: [],
+          },
+          {
+            name: "Secure Send",
+            url: "/secure-send",
+            subLinks: [],
+          },
+          {
+            name: "Internet Links",
+            url: "/internet-links",
+            subLinks: [],
+          },
+        ],
       },
       {
-        name: `Contact`,
-        url: `/contact`,
+        name: "Contact",
+        url: "/contact",
+        subLinks: [],
       },
     ],
   },
