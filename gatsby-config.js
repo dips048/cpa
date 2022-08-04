@@ -211,27 +211,27 @@ module.exports = {
                   },
                   {
                     name: "IRS Liens",
-                    url: "/IRS-liens",
+                    url: "/irs-liens",
                     subLinks: [],
                   },
                   {
                     name: "IRS Levies",
-                    url: "/IRS-levies",
+                    url: "/irs-levies",
                     subLinks: [],
                   },
                   {
                     name: "IRS Wage Garnishment",
-                    url: "/IRS-wage-garnishment",
+                    url: "/irs-wage-garnishment",
                     subLinks: [],
                   },
                   {
                     name: "IRS Seizures",
-                    url: "/IRS-seizures",
+                    url: "/irs-seizures",
                     subLinks: [],
                   },
                   {
                     name: "IRS Payment Plan",
-                    url: "/IRS-payment-plan",
+                    url: "/irs-payment-plan",
                     subLinks: [],
                   },
                   {
