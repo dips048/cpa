@@ -61,16 +61,16 @@ const FooterNav = ({ menuLinks, companyName }) => {
           <li key="disclaimer">Disclaimer</li>
         </ul>
         <div className="social text-center">
-          <Link href="https://www.facebook.com" title="Facebook">
+          <Link to="https://www.facebook.com" title="Facebook">
             <FontAwesomeIcon />
           </Link>
-          <Link href="https://www.twitter.com" title="Twitter">
+          <Link to="https://www.twitter.com" title="Twitter">
             <FontAwesomeIcon />
           </Link>
-          <Link href="https://www.linkedin.com" title="LinkedIn">
+          <Link to="https://www.linkedin.com" title="LinkedIn">
             <FontAwesomeIcon />
           </Link>
-          <Link href="" title="Google Plus">
+          <Link to="#" title="Google Plus">
             <FontAwesomeIcon />
           </Link>
         </div>
