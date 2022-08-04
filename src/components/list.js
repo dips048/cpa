@@ -28,7 +28,7 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
         <FontAwesomeIcon
           className="flex-grow-1"
           icon={faFeed}
-          onCLick={onNlshow}
+          onClick={onNlshow}
         ></FontAwesomeIcon>
         <Link to="mailto:support@cpasitesolutions.com" className="flex-grow-1 text-center">
           <FontAwesomeIcon

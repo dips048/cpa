@@ -10,11 +10,11 @@ const FooterNav = ({ menuLinks, companyName }) => {
         {menuLinks?.map(link => {
           if (link.name === "Resources") {
             return (
-              <ul className={navLinks}>
-                <b>{link.name}</b>
-                {link.subLinks?.map(subLink => {
+              <ul key="ul-1" className={navLinks}>
+                <h3>{link.name}</h3>
+                {link.subLinks?.map((subLink, i) => {
                   return (
-                    <li key={subLink}>
+                    <li key={subLink.url + i}>
                       <Link to={"resources" + subLink.url}>{subLink.name}</Link>
                     </li>
                   )
@@ -24,12 +24,12 @@ const FooterNav = ({ menuLinks, companyName }) => {
           }
           if (link.name === "Tax Center") {
             return (
-              <ul className={navLinks}>
-                <b>{link.name}</b>
-                {link.subLinks?.map(subLink => {
+              <ul  key="ul-2" className={navLinks}>
+                <h3>{link.name}</h3>
+                {link.subLinks?.map((subLink, i) => {
                   return (
-                    <li key={subLink}>
-                      <Link to={"resources" + subLink.url}>{subLink.name}</Link>
+                    <li key={subLink.url + i}>
+                      <Link to={"tax-center" + subLink.url}>{subLink.name}</Link>
                     </li>
                   )
                 })}
@@ -38,29 +38,29 @@ const FooterNav = ({ menuLinks, companyName }) => {
           }
           return null
         })}
-        <ul className={navLinks}>
-          <b>Contact</b>
-          <li key={companyName}>{companyName}</li>
-          <li key="'(800) 896-4500'">
-            <Link to={"(800) 896-4500"}>(800) 896-4500</Link>
+        <ul key="ul-3" className={navLinks}>
+          <h3>Contact</h3>
+          <li key={companyName + '1'}>{companyName}</li>
+          <li key="800896-4500">
+            <Link to="tel:(800) 896-4500">(800) 896-4500</Link>
           </li>
           <li key="support@cpasitesolutions.com">
-            <Link to={"support@cpasitesolutions.com"}>
+            <Link to={"mailto:support@cpasitesolutions.com"}>
               support@cpasitesolutions.com
             </Link>
           </li>
         </ul>
       </div>
       <div className={linkConatainer}>
-        <ul className={linkConatainer} style={{listStyle: "none"}}>
-          <li key={companyName}>
+        <ul key="ul-4" className={linkConatainer} style={{listStyle: "none"}}>
+          <li key={companyName + '2'}>
             © {companyName} 2022
           </li>
           <li key="siteMap">Site Map</li>
           <li key="privacyPolicy">Privacy Policy</li>
           <li key="disclaimer">Disclaimer</li>
         </ul>
-        <div class="social text-center">
+        <div className="social text-center">
           <Link href="https://www.facebook.com" title="Facebook">
             <FontAwesomeIcon />
           </Link>
