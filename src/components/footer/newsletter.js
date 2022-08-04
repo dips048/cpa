@@ -1,5 +1,5 @@
 import * as React from "react"
-import { container } from "./newsletter.module.css"
+import { container } from "./newsletter.module.scss"
 
 const Newsletter = () => {
   return (

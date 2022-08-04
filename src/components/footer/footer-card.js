@@ -1,8 +1,7 @@
 import * as React from "react"
-import { footerCard } from "./footer-card.module.css"
 
-const FooterCard = ({card}) => (
-  <div className={footerCard}>
+const FooterCard = ({ card }) => (
+  <div style={{ padding: "0 .5rem", textAlign: "center" }}>
     <div></div>
     <h3>{card.heading}</h3>
     <p>{card.content}</p>

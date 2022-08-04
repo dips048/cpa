@@ -1,5 +1,5 @@
 import * as React from "react"
-import { container } from "./layout.module.css"
+import { container } from "./layout.module.scss"
 import Header from "./header"
 import Footer from "./footer/footer"
 import { useStaticQuery, graphql } from "gatsby"
@@ -37,8 +37,12 @@ const Layout = ({ children }) => {
         companyName={data.site.siteMetadata.title}
         menuLinks={data.site.siteMetadata.menuLinks}
       />
+      <title>CPA Solutions</title>
       <main>{children}</main>
-      <Footer />
+      <Footer
+        companyName={data.site.siteMetadata.title}
+        menuLinks={data.site.siteMetadata.menuLinks}
+      />
     </div>
   )
 }

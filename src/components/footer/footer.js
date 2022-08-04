@@ -1,7 +1,6 @@
 import * as React from "react"
 import FooterCard from "./footer-card"
 import FooterNav from "./footer-nav"
-import { container } from "./footer.module.css"
 import Newsletter from "./newsletter"
 import { Container } from "react-bootstrap"
 
@@ -32,20 +31,16 @@ const data = [
   },
 ]
 
-const Footer = () => (
+const Footer = ({menuLinks, companyName}) => (
   <Container>
     <footer>
-      <div className={container}>
+      <div className="d-flex flex-column flex-md-row">
         {data.map((card, i) => (
           <FooterCard key={i} card={card} />
         ))}
       </div>
-      <div className={container}>
-        <Newsletter />
-      </div>
-      <div className={container}>
-        <FooterNav />
-      </div>
+      <Newsletter />
+      <FooterNav menuLinks={menuLinks} companyName={companyName} />
     </footer>
   </Container>
 )

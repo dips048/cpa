@@ -10,7 +10,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 import coffeeImage from "../images/coffee.png"
-import { coffee, imgScroll, slide, pattern1, globe, globe1, globe2, globe3, globe4 } from "./home.module.scss"
+import { coffee, imgScroll, slide, 
+  // pattern1, globe, globe1, globe2, globe3, globe4
+ } from "./home.module.scss"
 
 const Home = () => (
   <div>
@@ -38,13 +40,13 @@ const Home = () => (
       </div>
     </Container>
     <div className="d-flex" style={{backgroundColor: '#2d82a1', color: '#fff'}}>
-      <div className={pattern1}></div>
+      {/* <div className={pattern1}></div>
       <div className={globe}>
         <div className={globe1}></div>
         <div className={globe2}></div>
         <div className={globe3}></div>
         <div className={globe4}></div>
-      </div>
+      </div> */}
       <Container style={{zIndex: 1}}>
         <div className="row pt-5">
           <div className="col-lg-12">
