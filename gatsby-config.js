@@ -251,7 +251,7 @@ module.exports = {
                   },
                   {
                     name: "Get Your IRS File",
-                    url: "/get-your-IRS-file",
+                    url: "/get-your-irs-file",
                     subLinks: [],
                   },
                 ],
