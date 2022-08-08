@@ -20,7 +20,6 @@ const LoginModal = props => {
             <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
-              autoFocus
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="loginForm.ControlInput1">

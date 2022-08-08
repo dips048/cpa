@@ -33,7 +33,7 @@ const Dropdown = ({ menuLinks }) => (
                       {link3.subLinks?.map((link4, l) => (
                         <li key={link4.url + "-" + l}>
                           <Link
-                            to={link1.url + link2.url + link3.url + link3.url}
+                            to={link1.url + link2.url + link3.url + link4.url}
                             className={navLinkText}
                           >
                             {link4.name}
