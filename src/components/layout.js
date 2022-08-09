@@ -37,7 +37,6 @@ const Layout = ({ children }) => {
         companyName={data.site.siteMetadata.title}
         menuLinks={data.site.siteMetadata.menuLinks}
       />
-      <title>CPA Solutions</title>
       <main>{children}</main>
       <Footer
         companyName={data.site.siteMetadata.title}

@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 import Offcanvas from "react-bootstrap/Offcanvas"
+import {} from "./list.module.scss"
+import Sidebar from "./Sidebar"
 
 const List = ({ menuLinks, onShow, onNlshow }) => {
   const [show, setShow] = useState(false)
@@ -46,12 +48,14 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
           onClick={handleShow}
         ></FontAwesomeIcon>
       </div>
+
       <Offcanvas show={show} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body style={{ padding: 0 }}>
-          <ul style={{ listStyle: "none", padding: 0 }}>
+        <Sidebar items={menuLinks} />
+          {/* <ul style={{ listStyle: "none", padding: 0 }}>
             {menuLinks?.map((link1, i) => (
               <li style={{ padding: ".5rem 1rem" }} key={link1.url + "-" + i}>
                 <Link to={link1.url}>{link1.name}</Link>
@@ -100,7 +104,7 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
                 </ul>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </Offcanvas.Body>
       </Offcanvas>
     </div>
