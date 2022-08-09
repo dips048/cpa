@@ -10,7 +10,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 import Offcanvas from "react-bootstrap/Offcanvas"
-import {} from "./list.module.scss"
 import Sidebar from "./Sidebar"
 
 const List = ({ menuLinks, onShow, onNlshow }) => {
