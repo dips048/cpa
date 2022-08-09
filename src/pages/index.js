@@ -5,6 +5,7 @@ import Home from "../components/home"
 const IndexPage = () => {
   return (
     <Layout>
+      <title>CPA Solutions</title>
       <Home></Home>
     </Layout>
   )
