@@ -2,7 +2,7 @@ import * as React from "react"
 import SidebarItem from "./SidebarItem"
 
 export default function Sidebar({ items }) {
-  items = items.map(i => {
+  const menuLinks = [...items.map(i => {
     if (i.subLinks && i.subLinks.length) {
       i.subLinks = i.subLinks.map(j => {
         j.subLinks = j.subLinks.map(k => {
@@ -18,10 +18,10 @@ export default function Sidebar({ items }) {
       })
     }
     return i
-  })
+  })]
   return (
     <div className="sidebar">
-      {items?.map((item, index) => (
+      {menuLinks?.map((item, index) => (
         <SidebarItem key={index} item={item} />
       ))}
     </div>

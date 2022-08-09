@@ -15,7 +15,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
                 {link.subLinks?.map((subLink, i) => {
                   return (
                     <li key={subLink.url + i}>
-                      <Link to={"resources" + subLink.url}>{subLink.name}</Link>
+                      <Link to={"/resources" + subLink.url}>{subLink.name}</Link>
                     </li>
                   )
                 })}
@@ -29,7 +29,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
                 {link.subLinks?.map((subLink, i) => {
                   return (
                     <li key={subLink.url + i}>
-                      <Link to={"tax-center" + subLink.url}>{subLink.name}</Link>
+                      <Link to={"/tax-center" + subLink.url}>{subLink.name}</Link>
                     </li>
                   )
                 })}
