@@ -8,7 +8,7 @@ export default function SidebarItem({ item }) {
 
   if (item.subLinks && item.subLinks.length) {
     return (
-      <div className={open ? "sidebar-item open" : "sidebar-item"}>
+      <div className={open ? "open" : ""}>
         <div className="sidebar-title">
           <a href={item.url || "#"} className="sidebar-item plain">
             {item.name}
