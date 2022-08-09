@@ -10,6 +10,7 @@ import { Container } from "react-bootstrap"
 const Page = ({ data }) => {
   return (
     <Layout>
+      <title>{"CPA Solutions | " + data.mdx.frontmatter.title}</title>
       <Container>
         <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
