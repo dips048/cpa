@@ -14,26 +14,21 @@ const linkStyle = {
 }
 
 function Breadcrumb(props) {
-  function isLast(index) {
-    return index === props.crumbs.length - 1
-  }
-
   return (
     <nav className="row justify-content-center">
       <ol className="breadcrumb" style={breadcrumb}>
-        <li style={linkStyle} key={"home"}>
-          <Link  to="/">
+        <li key={"home"}>
+          <Link style={linkStyle} to="/">
             home
           </Link>
         </li>
         {props.crumbs.map((crumb, ci) => {
-          const disabled = isLast(ci) ? "disabled" : ""
           let link = "/"
           for (let i = 0; i <= ci; i++) {
             link = link + props.crumbs[i] + "/"
           }
           return (
-            <li key={ci} className={`align-items-center ${disabled}`}>
+            <li key={ci}>
               <Link style={linkStyle} to={link}>
                 {crumb}
               </Link>

@@ -4,7 +4,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Heading from "../components/heading"
 import woman from "../images/woman-1.png"
-// import Breadcrumb from "react-bootstrap/Breadcrumb"
 import Breadcrumb from "../components/breadcrumb"
 import { Container } from "react-bootstrap"
 
@@ -13,18 +12,7 @@ const Page = ({ data }) => {
     <Layout>
       <title>{"CPA Solutions | " + data.mdx.frontmatter.title}</title>
       <Container>
-        <Breadcrumb crumbs={data.mdx.frontmatter.url.split("/")}>
-          {/* <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          {console.log(data.mdx.frontmatter.url.split("/"))}
-          {data.mdx.frontmatter.url.split("/").map((link, i) => (
-            <Breadcrumb.Item href={"/" + link}>
-              {data.mdx.frontmatter.title}
-            </Breadcrumb.Item>
-          ))}
-          <Breadcrumb.Item active href={"/" + data.mdx.frontmatter.url}>
-            {data.mdx.frontmatter.title}
-          </Breadcrumb.Item> */}
-        </Breadcrumb>
+        <Breadcrumb crumbs={data.mdx.frontmatter.url.split("/")}></Breadcrumb>
       </Container>
       <Heading title={data.mdx.frontmatter.title} />
       <Container className="position-relative">
