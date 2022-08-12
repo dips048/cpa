@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap"
 
 const Heading = ({ title }) => {
   return (
-    <div style={{ backgroundColor: "#2d82a1", color: "#fff" }}>
+    <div className="heading">
       {/* <div className={pattern1}></div>
       <div className={globe}>
         <div className={globe1}></div>

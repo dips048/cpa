@@ -1,8 +1,57 @@
 @import "~bootstrap/scss/bootstrap";
 
+$color-1: #2d3e50;
+$color-2: #f4fafc;
+$bg-color-1: #f4fafc;
+$bg-color-2: rgba(22, 22, 22, 1);
+$bg-color-3: #2da1a0;
+
+$hover-color-1:  rgb(216, 216, 216);
+$hover-color-2:  rgba(255, 255, 255, 0.1);
+$hover-color-3: #2d82a1;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-1;
+  background: $bg-color-1;
+}
+
+.heading {
+  background-color: $bg-color-2;
+  color: $color-2;  
+}
+
+.footer-nav {
+  color: $color-2;
+  background: $bg-color-2;  
+  padding: 1em;
+
+  a {
+    color: $color-2;
+    text-decoration: none;
+  }
+}
+
+button {
+  background: $bg-color-3;
+  border-color: $bg-color-3;
+  color: $color-2 ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: none;
+}
+
+button:hover {
+  background: $hover-color-3;
+  border-color: $hover-color-3;
+}
+
 .sidebar {
   flex-shrink: 0;
-  background-color: rgba(22, 22, 22, 1);
+  background-color: $bg-color-2;
   height: 100%;
   overflow: auto;
 
@@ -20,7 +69,7 @@
 }
 
 .sidebar-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: $hover-color-2;
 }
 
 .sidebar-title {
@@ -50,7 +99,7 @@
 }
 
 .sidebar-item.plain {
-  color: #fff;
+  color: $color-2;
   text-decoration: none;
   display: block;
   flex-grow: 1;
@@ -61,12 +110,12 @@
 }
 
 .offcanvas-header {
-  color: #fff;
-  background-color: rgba(22, 22, 22, 1);
+  color: $color-2;
+  background-color: $bg-color-2;
   padding: 0.5em;
 }
 
 .offcanvas-header .btn-close {
-  color: #fff;
+  color: $color-2;
   padding: .5em;
 }

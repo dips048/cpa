@@ -32,17 +32,16 @@ const data = [
 ]
 
 const Footer = ({menuLinks, companyName}) => (
-  <Container>
+
     <footer>
-      <div className="d-flex flex-column flex-md-row">
+      <Container className="d-flex flex-column flex-md-row">
         {data.map((card, i) => (
           <FooterCard key={i} card={card} />
         ))}
-      </div>
+      </Container>
       <Newsletter />
       <FooterNav menuLinks={menuLinks} companyName={companyName} />
     </footer>
-  </Container>
 )
 
 export default Footer
