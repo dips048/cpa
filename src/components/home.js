@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Container } from "react-bootstrap"
-import woman from "../../static/woman-1.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faBriefcase,
@@ -9,21 +8,24 @@ import {
   faCalculator,
 } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
-import coffeeImage from "../../static/coffee.png"
-import { coffee, imgScroll, slide, 
+import {
+  coffee,
+  imgScroll,
+  slide,
   // pattern1, globe, globe1, globe2, globe3, globe4
- } from "./home.module.scss"
+} from "./home.module.scss"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Home = () => (
   <div>
-    <Container className="d-md-flex" style={{zIndex: 1}}>
-      <div className="text-center order-md-2">
-        <img
+    <Container className="d-md-flex" style={{ zIndex: 1 }}>
+      <div className="text-center order-md-2 mx-auto">
+        <StaticImage
           style={{ margin: "0 auto" }}
-          width={"260px"}
-          height={"400px"}
-          src={woman}
-          alt="woman"
+          src="../../static/woman-1.png"
+          alt="woman-1"
+          width={260}
+          height={400}
         />
       </div>
       <div className="row order-md-1 py-2 flex-md-grow-1">
@@ -39,7 +41,10 @@ const Home = () => (
         </div>
       </div>
     </Container>
-    <div className="d-flex" style={{backgroundColor: '#1053b8', color: '#fff'}}>
+    <div
+      className="d-flex"
+      style={{ backgroundColor: "#1053b8", color: "#fff" }}
+    >
       {/* <div className={pattern1}></div>
       <div className={globe}>
         <div className={globe1}></div>
@@ -47,7 +52,7 @@ const Home = () => (
         <div className={globe3}></div>
         <div className={globe4}></div>
       </div> */}
-      <Container style={{zIndex: 1}}>
+      <Container style={{ zIndex: 1 }}>
         <div className="row pt-5">
           <div className="col-lg-12">
             <h1>Company Name, Accounting</h1>
@@ -60,7 +65,10 @@ const Home = () => (
             </p>
           </div>
         </div>
-        <div className="row my-5 px-3 align-xs-center text-center text-sm-start d-flex" style={{backgroundColor: '#fff', color: '#2d3e50'}}>
+        <div
+          className="row my-5 px-3 align-xs-center text-center text-sm-start d-flex"
+          style={{ backgroundColor: "#fff", color: "#2d3e50" }}
+        >
           <div className="col-lg-6 col-md-6 col-sm-12 my-4">
             <div className="row">
               <div className="col-sm-2">
@@ -118,7 +126,9 @@ const Home = () => (
                 <p>
                   QuickBooks is the ideal business accounting software for small
                   to mid-sized business owners.
-                  <Link to={"/services/services-for-quick-books"}>learn more</Link>
+                  <Link to={"/services/services-for-quick-books"}>
+                    learn more
+                  </Link>
                 </p>
               </div>
             </div>
@@ -126,7 +136,7 @@ const Home = () => (
         </div>
       </Container>
     </div>
-    <Container style={{zIndex: 1}}>
+    <Container style={{ zIndex: 1 }}>
       <div className="row my-5">
         <div className="col-lg-12">
           <h1 className="h1 text-center">
@@ -138,7 +148,7 @@ const Home = () => (
           <div className="col-12 d-flex row">
             <div className="col-lg-5 order-lg-2">
               <div className={coffee}>
-                <img src={coffeeImage} alt="coffee" />
+                <StaticImage src="../../static/coffee.png" alt="coffee" />
                 <div className={imgScroll}>
                   <div className={slide}></div>
                 </div>

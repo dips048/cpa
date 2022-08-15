@@ -3,10 +3,10 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Heading from "../components/heading"
-import woman from "../../static/woman-1.png"
 import Breadcrumb from "../components/breadcrumb"
 import { Container } from "react-bootstrap"
 import { Seo } from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Page = ({ data }) => {
   return (
@@ -43,7 +43,11 @@ const Page = ({ data }) => {
                     <label htmlFor="callTime" className="form-label">
                       Best Time To Call
                     </label>
-                    <input type="email" id="callTime" className="form-control" />
+                    <input
+                      type="email"
+                      id="callTime"
+                      className="form-control"
+                    />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="comments">Comments</label>
@@ -54,7 +58,11 @@ const Page = ({ data }) => {
                     ></textarea>
                   </div>
                   <div className="mb-3 form-check">
-                    <input type="checkbox" id="checkBox" className="form-check-input" />
+                    <input
+                      type="checkbox"
+                      id="checkBox"
+                      className="form-check-input"
+                    />
                     <label className="form-check-label" htmlFor="checkBox">
                       CAPTCHA Image
                     </label>
@@ -80,12 +88,12 @@ const Page = ({ data }) => {
               className="text-center"
               style={{ position: "sticky", top: "0" }}
             >
-              <img
+              <StaticImage
                 style={{ margin: "0 auto" }}
-                width={"260px"}
-                height={"400px"}
-                src={woman}
-                alt="woman"
+                src="../../static/woman-1.png"
+                alt="woman-1"
+                width={260}
+                height={400}
               />
               <button className="btn btn-primary">
                 Request A Free Consultation
