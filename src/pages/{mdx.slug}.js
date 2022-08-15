@@ -17,7 +17,7 @@ const Page = ({ data }) => {
       <Heading title={data.mdx.frontmatter.title} />
       <Container className="position-relative">
         <div className="row my-5">
-          <div className="col-md-7">
+          <div className="col-lg-7">
             {" "}
             <MDXRenderer>{data.mdx.body}</MDXRenderer>
             {data.mdx.frontmatter.useForm && (
@@ -75,8 +75,8 @@ const Page = ({ data }) => {
               </div>
             )}
           </div>
-          <div className="col-md-1"></div>
-          <div className="col-md-4 d-none d-md-block">
+          <div className="col-lg-1"></div>
+          <div className="col-lg-4 d-none d-lg-block">
             <div
               className="text-center"
               style={{ position: "sticky", top: "0" }}
