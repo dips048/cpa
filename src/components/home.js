@@ -39,7 +39,7 @@ const Home = () => (
         </div>
       </div>
     </Container>
-    <div className="d-flex" style={{backgroundColor: '#2d82a1', color: '#fff'}}>
+    <div className="d-flex" style={{backgroundColor: '#1053b8', color: '#fff'}}>
       {/* <div className={pattern1}></div>
       <div className={globe}>
         <div className={globe1}></div>
@@ -118,7 +118,7 @@ const Home = () => (
                 <p>
                   QuickBooks is the ideal business accounting software for small
                   to mid-sized business owners.
-                  <Link to={"/service/services-for-quickbook"}>learn more</Link>
+                  <Link to={"/services/services-for-quick-books"}>learn more</Link>
                 </p>
               </div>
             </div>

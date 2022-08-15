@@ -4,11 +4,10 @@ $color-1: #2d3e50;
 $color-2: #f4fafc;
 $bg-color-1: #f4fafc;
 $bg-color-2: rgba(22, 22, 22, 1);
-$bg-color-3: #2da1a0;
+$bg-color-3: #1053b8;
 
 $hover-color-1:  rgb(216, 216, 216);
 $hover-color-2:  rgba(255, 255, 255, 0.1);
-$hover-color-3: #2d82a1;
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -19,7 +18,7 @@ body {
 }
 
 .heading {
-  background-color: $bg-color-2;
+  background-color: $bg-color-3;
   color: $color-2;  
 }
 
@@ -34,20 +33,20 @@ body {
   }
 }
 
-button {
-  background: $bg-color-3;
-  border-color: $bg-color-3;
-  color: $color-2 ;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: none;
-}
+// button {
+//   background: $bg-color-3;
+//   border-color: $bg-color-3;
+//   color: $color-2 ;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   box-shadow: none;
+// }
 
-button:hover {
-  background: $hover-color-3;
-  border-color: $hover-color-3;
-}
+// button:hover {
+//   background: $hover-color-3;
+//   border-color: $hover-color-3;
+// }
 
 .sidebar {
   flex-shrink: 0;

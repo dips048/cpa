@@ -31,7 +31,7 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
           icon={faFeed}
           onClick={onNlshow}
         ></FontAwesomeIcon>
-        <Link to="mailto:support@cpasitesolutions.com" className="flex-grow-1 text-center">
+        <Link style={{textDecoration: "none", color: "#2d3e50"}} className="flex-grow-1 text-center" to="mailto:support@cpasitesolutions.com" >
           <FontAwesomeIcon
             icon={faEnvelope}
           ></FontAwesomeIcon>
