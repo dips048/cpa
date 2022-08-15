@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap"
 import List from "./list"
 import LoginModal from "./login-modal"
 import NewsletterModal from "./newsletter-modal"
+import { Link } from "gatsby"
 
 const Header = ({ companyName, menuLinks }) => {
   const [modalShow, setModalShow] = useState(false)
@@ -21,18 +22,18 @@ const Header = ({ companyName, menuLinks }) => {
       ></List>
       <div className="d-none d-lg-flex justify-content-lg-between py-2">
         <div>
-          <button onClick={() => setModalShow(true)}>Login</button>
+          <button class="btn btn-default btn-sm" onClick={() => setModalShow(true)}>Login</button>
           <LoginModal show={modalShow} onHide={() => setModalShow(false)} />
-          <button onClick={() => setNewsletterModal(true)}>Subscribe</button>
+          <button class="btn btn-primary btn-sm" onClick={() => setNewsletterModal(true)}>Subscribe</button>
           <NewsletterModal
             show={newsletterModal}
             onHide={() => setNewsletterModal(false)}
           />
         </div>
         <h3>
-          <a href="tel:(800) 896-4500" className="strong lead">
+          <Link to={"tel:(800) 896-4500"} className="strong lead">
             Call Us (987) 654 4321
-          </a>
+          </Link>
         </h3>
       </div>
       <nav className="d-flex justify-content-center justify-content-lg-between py-2">

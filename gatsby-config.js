@@ -8,6 +8,8 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "CPA Solutions",
+    description: "CPA solutions for people",
+    siteUrl: `https://www.cpa-solution.com`,
     menuLinks: [
       {
         name: "Home",

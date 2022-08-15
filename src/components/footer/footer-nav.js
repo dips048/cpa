@@ -13,7 +13,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
             if (link.name === "Resources") {
               return (
                 <ul key="ul-1" className={navLinks}>
-                  <h3>{link.name}</h3>
+                  <h4>{link.name}</h4>
                   {link.subLinks?.map((subLink, i) => {
                     return (
                       <li key={subLink.url + i}>
@@ -29,7 +29,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
             if (link.name === "Tax Center") {
               return (
                 <ul key="ul-2" className={navLinks}>
-                  <h3>{link.name}</h3>
+                  <h4>{link.name}</h4>
                   {link.subLinks?.map((subLink, i) => {
                     return (
                       <li key={subLink.url + i}>
@@ -45,7 +45,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
             return null
           })}
           <ul key="ul-3" className={navLinks}>
-            <h3>Contact</h3>
+            <h4>Contact</h4>
             <li key={companyName + "1"}>{companyName}</li>
             <li key="800896-4500">
               <Link to="tel:(800) 896-4500">(800) 896-4500</Link>

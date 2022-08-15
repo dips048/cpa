@@ -3,14 +3,14 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Heading from "../components/heading"
-import woman from "../images/woman-1.png"
+import woman from "../../static/woman-1.png"
 import Breadcrumb from "../components/breadcrumb"
 import { Container } from "react-bootstrap"
+import { SEO } from "../components/seo"
 
 const Page = ({ data }) => {
   return (
     <Layout>
-      <title>{"CPA Solutions | " + data.mdx.frontmatter.title}</title>
       <Container>
         <Breadcrumb crumbs={data.mdx.frontmatter.url.split("/")}></Breadcrumb>
       </Container>
@@ -88,7 +88,7 @@ const Page = ({ data }) => {
                 src={woman}
                 alt="woman"
               />
-              <button>Request A Free Consultation</button>
+              <button class="btn btn-primary">Request A Free Consultation</button>
             </div>
           </div>
         </div>
@@ -111,3 +111,7 @@ export const query = graphql`
 `
 
 export default Page
+
+export const Head = ({data}) => (
+  <SEO title={"CPA Solutions | " + data.mdx.frontmatter.title}/>
+)

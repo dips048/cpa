@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Container } from "react-bootstrap"
-import woman from "../images/woman-1.png"
+import woman from "../../static/woman-1.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faBriefcase,
@@ -9,7 +9,7 @@ import {
   faCalculator,
 } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
-import coffeeImage from "../images/coffee.png"
+import coffeeImage from "../../static/coffee.png"
 import { coffee, imgScroll, slide, 
   // pattern1, globe, globe1, globe2, globe3, globe4
  } from "./home.module.scss"
@@ -35,7 +35,7 @@ const Home = () => (
           <p>
             We offer services for business owners, executives, and individuals.
           </p>
-          <button>Free Consultation</button>
+          <button class="btn btn-primary">Free Consultation</button>
         </div>
       </div>
     </Container>
@@ -71,7 +71,7 @@ const Home = () => (
                 <p>
                   You get one-on-one guidance that helps manage risk and improve
                   performance.
-                  <Link to={"/service/service-for-individuals"}>
+                  <Link to={"/services/services-for-individuals"}>
                     learn more
                   </Link>
                 </p>
@@ -88,7 +88,7 @@ const Home = () => (
                 <p>
                   We take care of your business for you, so you can get back to
                   the job of running your business.
-                  <Link to={"/service/business-service"}>learn more</Link>
+                  <Link to={"/services/business-services"}>learn more</Link>
                 </p>
               </div>
             </div>
@@ -103,7 +103,7 @@ const Home = () => (
                 <p>
                   We pride ourselves on being very efficient, affordable, and of
                   course, extremely discreet.
-                  <Link to={"/service/tax-service"}>learn more</Link>
+                  <Link to={"/services/tax-services"}>learn more</Link>
                 </p>
               </div>
             </div>
@@ -166,7 +166,7 @@ const Home = () => (
               </p>
               <p className="lead fw-bold text-center mt-4">
                 Please call us today at{" "}
-                <a href="tel:(800) 896-4500">(800) 896-4500</a>. Thanks for
+                <Link to={"tel:(800) 896-4500"}>(800) 896-4500</Link>. Thanks for
                 visiting!
               </p>
             </div>
