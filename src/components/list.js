@@ -30,10 +30,12 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
           icon={faFeed}
           onClick={onNlshow}
         ></FontAwesomeIcon>
-        <a style={{textDecoration: "none", color: "#2d3e50"}} className="flex-grow-1 text-center" href="mailto:support@cpasitesolutions.com" >
-          <FontAwesomeIcon
-            icon={faEnvelope}
-          ></FontAwesomeIcon>
+        <a
+          style={{ textDecoration: "none", color: "#2d3e50" }}
+          className="flex-grow-1 text-center"
+          href="mailto:support@cpasitesolutions.com"
+        >
+          <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
         </a>
 
         <FontAwesomeIcon
@@ -52,57 +54,7 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body style={{ padding: 0 }}>
-        <Sidebar items={menuLinks} />
-          {/* <ul style={{ listStyle: "none", padding: 0 }}>
-            {menuLinks?.map((link1, i) => (
-              <li style={{ padding: ".5rem 1rem" }} key={link1.url + "-" + i}>
-                <Link to={link1.url}>{link1.name}</Link>
-                <ul style={{ listStyle: "none", padding: 0 }}>
-                  {link1.subLinks?.map((link2, j) => {
-                    return (
-                      <li
-                        style={{ padding: ".5rem 1rem" }}
-                        key={link2.url + "-" + j}
-                      >
-                        <Link to={link1.url + link2.url}>{link2.name}</Link>
-                        <ul style={{ listStyle: "none", padding: 0 }}>
-                          {link2.subLinks?.map((link3, k) => (
-                            <li
-                              style={{ padding: ".5rem 1rem" }}
-                              key={link3.url + "-" + k}
-                            >
-                              <Link to={link1.url + link2.url + link3.url}>
-                                {link3.name}
-                              </Link>
-                              <ul style={{ listStyle: "none", padding: 0 }}>
-                                {link3.subLinks?.map((link4, l) => (
-                                  <li
-                                    style={{ padding: ".5rem 1rem" }}
-                                    key={link4.url + "-" + l}
-                                  >
-                                    <Link
-                                      to={
-                                        link1.url +
-                                        link2.url +
-                                        link3.url +
-                                        link4.url
-                                      }
-                                    >
-                                      {link4.name}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </li>
-            ))}
-          </ul> */}
+          <Sidebar items={menuLinks} />
         </Offcanvas.Body>
       </Offcanvas>
     </div>

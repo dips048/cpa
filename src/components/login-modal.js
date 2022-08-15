@@ -22,7 +22,7 @@ const LoginModal = props => {
               type="email"
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="loginForm.ControlInput1">
+          <Form.Group className="mb-3" controlId="loginForm.ControlInput2">
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" />
           </Form.Group>

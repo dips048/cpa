@@ -11,7 +11,7 @@ const Header = ({ companyName, menuLinks }) => {
   const [newsletterModal, setNewsletterModal] = useState(false)
 
   return (
-    <Container style={{ zIndex: 1 }}>
+    <div style={{ zIndex: 1 }}>
       <List
         show={modalShow}
         nlShow={newsletterModal}
@@ -19,7 +19,7 @@ const Header = ({ companyName, menuLinks }) => {
         onNlshow={() => setNewsletterModal(true)}
         menuLinks={menuLinks}
       ></List>
-      <div className="d-none d-lg-flex justify-content-lg-between py-2">
+      <Container className="d-none d-lg-flex justify-content-lg-between py-2">
         <div>
           <button className="btn btn-default btn-sm" onClick={() => setModalShow(true)}>Login</button>
           <LoginModal show={modalShow} onHide={() => setModalShow(false)} />
@@ -34,14 +34,14 @@ const Header = ({ companyName, menuLinks }) => {
             Call Us (987) 654 4321
           </a>
         </h3>
-      </div>
-      <nav className="d-flex justify-content-center justify-content-lg-between py-2">
+      </Container>
+      <Container className="d-flex justify-content-center justify-content-lg-between py-2">
         <h1>{companyName}</h1>
         <div className="d-none d-lg-flex">
           <Dropdown menuLinks={menuLinks}></Dropdown>
         </div>
-      </nav>
-    </Container>
+      </Container>
+    </div>
   )
 }
 
