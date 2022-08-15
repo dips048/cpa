@@ -7,13 +7,6 @@
   padding: 0;
 }
 
-.social a {
-  text-decoration: none;
-  padding: 0 5px;
-  font-size: 20px;
-  line-height: 25px;
-}
-
 .link-conatainer {
   display: flex;
   flex-direction: column;
@@ -28,6 +21,11 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
   .link-conatainer {
     display: flex;
     flex-direction: row;
@@ -40,10 +38,6 @@
     text-align: start;
     padding: 0;
   }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
 }
 
 // Extra large devices (large desktops, 1200px and up)

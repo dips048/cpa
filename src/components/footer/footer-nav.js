@@ -2,6 +2,7 @@ import * as React from "react"
 import { navLinks, linkConatainer } from "./footer-nav.module.scss"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Container } from "react-bootstrap"
 
 const FooterNav = ({ menuLinks, companyName }) => {
@@ -48,12 +49,12 @@ const FooterNav = ({ menuLinks, companyName }) => {
             <h4>Contact</h4>
             <li key={companyName + "1"}>{companyName}</li>
             <li key="800896-4500">
-              <Link to="tel:(800) 896-4500">(800) 896-4500</Link>
+              <a href="tel:(800) 896-4500">(800) 896-4500</a>
             </li>
             <li key="support@cpasitesolutions.com">
-              <Link to={"mailto:support@cpasitesolutions.com"}>
+              <a href="mailto:support@cpasitesolutions.com">
                 support@cpasitesolutions.com
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -69,29 +70,29 @@ const FooterNav = ({ menuLinks, companyName }) => {
               listStyle: "none",
             }}
           >
-            <li key={companyName + "2"}>
-              <a href="#">© {companyName} 2022</a>
+            <li style={{paddingLeft: '.5em'}} key={companyName + "2"}>
+              <a href="?">© {companyName} 2022</a>
             </li>
-            <li key="siteMap">
-              <a href="#">Site Map</a>
+            <li style={{paddingLeft: '.5em'}} key="siteMap">
+              <a href="?">Site Map</a>
             </li>
-            <li key="privacyPolicy">
-              <a href="#">Privacy Policy</a>
+            <li style={{paddingLeft: '.5em'}} key="privacyPolicy">
+              <a href="?">Privacy Policy</a>
             </li>
-            <li key="disclaimer">
-              <a href="#">Disclaimer</a>
+            <li style={{paddingLeft: '.5em'}} key="disclaimer">
+              <a href="?">Disclaimer</a>
             </li>
           </ul>
           <div className="social text-center">
-            <Link to="https://www.facebook.com" title="Facebook">
-              <FontAwesomeIcon />
-            </Link>
-            <Link to="https://www.twitter.com" title="Twitter">
-              <FontAwesomeIcon />
-            </Link>
-            <Link to="https://www.linkedin.com" title="LinkedIn">
-              <FontAwesomeIcon />
-            </Link>
+            <a href="https://www.facebook.com" title="Facebook">
+              <FontAwesomeIcon icon={faFacebook}/>
+            </a>
+            <a href="https://www.twitter.com" title="Twitter">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a href="https://www.linkedin.com" title="LinkedIn">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
           </div>
         </div>
       </Container>

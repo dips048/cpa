@@ -8,7 +8,6 @@ import {
   faPhone,
   faNavicon,
 } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "gatsby"
 import Offcanvas from "react-bootstrap/Offcanvas"
 import Sidebar from "./Sidebar"
 
@@ -31,11 +30,11 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
           icon={faFeed}
           onClick={onNlshow}
         ></FontAwesomeIcon>
-        <Link style={{textDecoration: "none", color: "#2d3e50"}} className="flex-grow-1 text-center" to="mailto:support@cpasitesolutions.com" >
+        <a style={{textDecoration: "none", color: "#2d3e50"}} className="flex-grow-1 text-center" href="mailto:support@cpasitesolutions.com" >
           <FontAwesomeIcon
             icon={faEnvelope}
           ></FontAwesomeIcon>
-        </Link>
+        </a>
 
         <FontAwesomeIcon
           className="flex-grow-1"

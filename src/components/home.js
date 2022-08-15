@@ -35,7 +35,7 @@ const Home = () => (
           <p>
             We offer services for business owners, executives, and individuals.
           </p>
-          <button class="btn btn-primary">Free Consultation</button>
+          <button className="btn btn-primary">Free Consultation</button>
         </div>
       </div>
     </Container>
@@ -166,7 +166,7 @@ const Home = () => (
               </p>
               <p className="lead fw-bold text-center mt-4">
                 Please call us today at{" "}
-                <Link to={"tel:(800) 896-4500"}>(800) 896-4500</Link>. Thanks for
+                <a href={"tel:(800) 896-4500"}>(800) 896-4500</a>. Thanks for
                 visiting!
               </p>
             </div>

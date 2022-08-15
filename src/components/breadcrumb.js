@@ -1,10 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
-const breadcrumb = {
-  backgroundColor: "white",
-  borderRadius: "0.37rem",
-}
+import { Container } from "react-bootstrap"
 
 const linkStyle = {
   display: "block",
@@ -15,28 +11,38 @@ const linkStyle = {
 
 function Breadcrumb(props) {
   return (
-    <nav className="row justify-content-center">
-      <ol className="breadcrumb" style={breadcrumb}>
+    <Container>
+      <ol
+        className="d-flex justify-content-center justify-content-lg-start p-0"
+        style={{ listStyle: "none" }}
+      >
         <li key={"home"}>
           <Link style={linkStyle} to="/">
-            home
+            Home
           </Link>
         </li>
+      
         {props.crumbs.map((crumb, ci) => {
+          const last = props.crumbs.length-1;
           let link = "/"
           for (let i = 0; i <= ci; i++) {
             link = link + props.crumbs[i] + "/"
           }
           return (
             <li key={ci}>
-              <Link style={linkStyle} to={link}>
-                {crumb}
+              <Link style={linkStyle} className={last === ci ? "disabled" : ""} to={link}>
+                {crumb
+                  .split("-")
+                  .map(
+                    word => word[0].toUpperCase() + word.slice(1).toLowerCase()
+                  )
+                  .join(" ")}
               </Link>
             </li>
           )
         })}
       </ol>
-    </nav>
+    </Container>
   )
 }
 

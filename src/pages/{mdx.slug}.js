@@ -6,14 +6,12 @@ import Heading from "../components/heading"
 import woman from "../../static/woman-1.png"
 import Breadcrumb from "../components/breadcrumb"
 import { Container } from "react-bootstrap"
-import { SEO } from "../components/seo"
+import { Seo } from "../components/seo"
 
 const Page = ({ data }) => {
   return (
     <Layout>
-      <Container>
-        <Breadcrumb crumbs={data.mdx.frontmatter.url.split("/")}></Breadcrumb>
-      </Container>
+      <Breadcrumb crumbs={data.mdx.frontmatter.url.split("/")}></Breadcrumb>
       <Heading title={data.mdx.frontmatter.title} />
       <Container className="position-relative">
         <div className="row my-5">
@@ -24,39 +22,40 @@ const Page = ({ data }) => {
               <div className="mx-auto" style={{ maxWidth: "400px" }}>
                 <form>
                   <div className="mb-3">
-                    <label for="" className="form-label">
+                    <label htmlFor="name" className="form-label">
                       Name
                     </label>
-                    <input type="text" className="form-control" />
+                    <input type="text" id="name" className="form-control" />
                   </div>
                   <div className="mb-3">
-                    <label for="" className="form-label">
+                    <label htmlFor="email" className="form-label">
                       Email address
                     </label>
-                    <input type="email" className="form-control" />
+                    <input type="email" id="email" className="form-control" />
                   </div>
                   <div className="mb-3">
-                    <label for="" className="form-label">
+                    <label htmlFor="pNumber" className="form-label">
                       Phone Number
                     </label>
-                    <input type="text" className="form-control" />
+                    <input type="text" id="pNumber" className="form-control" />
                   </div>
                   <div className="mb-3">
-                    <label for="" className="form-label">
+                    <label htmlFor="callTime" className="form-label">
                       Best Time To Call
                     </label>
-                    <input type="email" className="form-control" />
+                    <input type="email" id="callTime" className="form-control" />
                   </div>
                   <div className="mb-3">
-                    <label for="">Comments</label>
+                    <label htmlFor="comments">Comments</label>
                     <textarea
+                      id="comments"
                       className="form-control"
                       placeholder="Leave a comment here"
                     ></textarea>
                   </div>
                   <div className="mb-3 form-check">
-                    <input type="checkbox" className="form-check-input" />
-                    <label className="form-check-label" for="">
+                    <input type="checkbox" id="checkBox" className="form-check-input" />
+                    <label className="form-check-label" htmlFor="checkBox">
                       CAPTCHA Image
                     </label>
                   </div>
@@ -64,7 +63,7 @@ const Page = ({ data }) => {
                     <input type="" className="form-control" />
                   </div>
                   <div className="d-flex justify-content-between">
-                    <a id="captcha_refresh" href="#">
+                    <a id="captcha_refresh" href="?">
                       [ Show a different Image ]
                     </a>
                     <button type="submit" className="btn btn-primary">
@@ -88,7 +87,9 @@ const Page = ({ data }) => {
                 src={woman}
                 alt="woman"
               />
-              <button class="btn btn-primary">Request A Free Consultation</button>
+              <button className="btn btn-primary">
+                Request A Free Consultation
+              </button>
             </div>
           </div>
         </div>
@@ -112,6 +113,6 @@ export const query = graphql`
 
 export default Page
 
-export const Head = ({data}) => (
-  <SEO title={"CPA Solutions | " + data.mdx.frontmatter.title}/>
+export const Head = ({ data }) => (
+  <Seo title={"CPA Solutions | " + data.mdx.frontmatter.title} />
 )

@@ -27,14 +27,14 @@ const data = [
     content:
       "Find comfort in knowing an Expert in accounting is only an email or phone-call away.",
     linkTitle: "Secure Send",
-    link: "/",
+    link: "/resources/secure-send",
   },
 ]
 
 const Footer = ({menuLinks, companyName}) => (
 
     <footer>
-      <Container className="d-flex flex-column flex-md-row">
+      <Container className="row text-center mx-auto">
         {data.map((card, i) => (
           <FooterCard key={i} card={card} />
         ))}
