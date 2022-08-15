@@ -17,6 +17,10 @@ body {
   background: $bg-color-1;
 }
 
+.icon-color {
+  color: $bg-color-3;
+}
+
 a.disabled {
   pointer-events: none;
   color: black;
@@ -39,6 +43,11 @@ a.disabled {
   }
 }
 
+.btn.btn-primary {
+  a {
+    color: #fff;
+  }
+}
 
 // button {
 //   background: $bg-color-3;

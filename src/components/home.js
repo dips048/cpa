@@ -15,6 +15,7 @@ import {
   // pattern1, globe, globe1, globe2, globe3, globe4
 } from "./home.module.scss"
 import { StaticImage } from "gatsby-plugin-image"
+import CallLink from "./callLink"
 
 const Home = () => (
   <div>
@@ -172,11 +173,11 @@ const Home = () => (
               <p className="lead">
                 We can also assist if you find yourself on the wrong side of the
                 IRS. We're here to help you resolve your tax problems and put an
-                end to the misery that the IRS can put you through.
+                end to the misery that the IRS can put you through. 
               </p>
               <p className="lead fw-bold text-center mt-4">
                 Please call us today at{" "}
-                <a href={"tel:(800) 896-4500"}>(800) 896-4500</a>. Thanks for
+                <CallLink />. Thanks for
                 visiting!
               </p>
             </div>

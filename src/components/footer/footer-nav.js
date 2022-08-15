@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Container } from "react-bootstrap"
+import CallLink from "../callLink"
 
 const FooterNav = ({ menuLinks, companyName }) => {
   return (
@@ -48,8 +49,8 @@ const FooterNav = ({ menuLinks, companyName }) => {
           <ul key="ul-3" className={navLinks}>
             <h4>Contact</h4>
             <li key={companyName + "1"}>{companyName}</li>
-            <li key="800896-4500">
-              <a href="tel:(800) 896-4500">(800) 896-4500</a>
+            <li key="call-link">
+              <CallLink />
             </li>
             <li key="support@cpasitesolutions.com">
               <a href="mailto:support@cpasitesolutions.com">

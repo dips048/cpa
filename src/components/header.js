@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap"
 import List from "./list"
 import LoginModal from "./login-modal"
 import NewsletterModal from "./newsletter-modal"
+import CallLink from "./callLink"
 
 const Header = ({ companyName, menuLinks }) => {
   const [modalShow, setModalShow] = useState(false)
@@ -29,10 +30,8 @@ const Header = ({ companyName, menuLinks }) => {
             onHide={() => setNewsletterModal(false)}
           />
         </div>
-        <h3>
-          <a href={"tel:(800) 896-4500"} className="strong lead">
-            Call Us (987) 654 4321
-          </a>
+        <h3 className="strong lead">
+          Call Us: <CallLink />
         </h3>
       </Container>
       <Container className="d-flex justify-content-center justify-content-lg-between py-2">

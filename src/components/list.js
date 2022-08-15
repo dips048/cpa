@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import Offcanvas from "react-bootstrap/Offcanvas"
 import Sidebar from "./Sidebar"
+import CallLink from "./callLink"
 
 const List = ({ menuLinks, onShow, onNlshow }) => {
   const [show, setShow] = useState(false)
@@ -19,41 +20,32 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
   return (
     <div>
       <div className="d-flex justify-content-between d-lg-none py-2">
-        <FontAwesomeIcon
-          className="flex-grow-1"
-          icon={faLock}
-          onClick={onShow}
-        ></FontAwesomeIcon>
-
-        <FontAwesomeIcon
-          className="flex-grow-1"
-          icon={faFeed}
-          onClick={onNlshow}
-        ></FontAwesomeIcon>
+        <span className="flex-grow-1 text-center icon-color" onClick={onShow}>
+          <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
+        </span>
+        <span className="flex-grow-1 text-center icon-color" onClick={onNlshow}>
+          <FontAwesomeIcon icon={faFeed}></FontAwesomeIcon>
+        </span>
         <a
-          style={{ textDecoration: "none", color: "#2d3e50" }}
-          className="flex-grow-1 text-center"
+          className="flex-grow-1 text-center icon-color"
           href="mailto:support@cpasitesolutions.com"
         >
           <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
         </a>
-
-        <FontAwesomeIcon
-          className="flex-grow-1"
-          icon={faPhone}
-        ></FontAwesomeIcon>
-        <FontAwesomeIcon
-          className="flex-grow-1"
-          icon={faNavicon}
+        <CallLink icon={true} className="flex-grow-1 text-center icon-color" />
+        <span
+          className="flex-grow-1 text-center icon-color"
           onClick={handleShow}
-        ></FontAwesomeIcon>
+        >
+          <FontAwesomeIcon icon={faNavicon}></FontAwesomeIcon>
+        </span>
       </div>
 
       <Offcanvas show={show} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body style={{ padding: 0 }}>
+        <Offcanvas.Body className="p-0">
           <Sidebar items={menuLinks} />
         </Offcanvas.Body>
       </Offcanvas>
