@@ -5,11 +5,13 @@
   margin: 0 auto;
 }
 
-.coffee .gatsby-image-wrapper  {
+.coffee img  {    
   position: absolute;
-  z-index: 1;
-  left: 50%;
+  z-index: 1; 
   margin-left: -256px;
+  max-width: 512px;
+  height: 494px;
+  margin: 0 auto;
 }
 
 .img-scroll {

@@ -84,14 +84,14 @@ const FooterNav = ({ menuLinks, companyName }) => {
               <a href="?">Disclaimer</a>
             </li>
           </ul>
-          <div className="social text-center">
-            <a href="https://www.facebook.com" title="Facebook">
+          <div className="text-center">
+            <a className="m-1" href="https://www.facebook.com" title="Facebook">
               <FontAwesomeIcon icon={faFacebook}/>
             </a>
-            <a href="https://www.twitter.com" title="Twitter">
+            <a className="m-1" href="https://www.twitter.com" title="Twitter">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="https://www.linkedin.com" title="LinkedIn">
+            <a className="m-1" href="https://www.linkedin.com" title="LinkedIn">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>

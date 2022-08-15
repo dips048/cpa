@@ -38,7 +38,9 @@ const Home = () => (
           <p>
             We offer services for business owners, executives, and individuals.
           </p>
-          <button className="btn btn-primary">Free Consultation</button>
+          <button className="btn btn-primary btn-lg">
+            <Link to="/contact">Free Consultation</Link>
+          </button>
         </div>
       </div>
     </Container>
@@ -70,7 +72,7 @@ const Home = () => (
           className="row my-5 px-3 align-xs-center text-center text-sm-start d-flex"
           style={{ backgroundColor: "#fff", color: "#2d3e50" }}
         >
-          <div className="col-lg-6 col-md-6 col-sm-12 my-4">
+          <div className="col-lg-6 col-md-12 my-4">
             <div className="row">
               <div className="col-sm-2">
                 <FontAwesomeIcon icon={faCompass} size="4x" />
@@ -87,7 +89,7 @@ const Home = () => (
               </div>
             </div>
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-12 my-4">
+          <div className="col-lg-6 col-md-12 my-4">
             <div className="row">
               <div className="col-sm-2">
                 <FontAwesomeIcon icon={faBriefcase} size="4x" />
@@ -102,7 +104,7 @@ const Home = () => (
               </div>
             </div>
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-12 my-4">
+          <div className="col-lg-6 col-md-12 my-4">
             <div className="row">
               <div className="col-sm-2">
                 <FontAwesomeIcon icon={faCalculator} size="4x" />
@@ -117,7 +119,7 @@ const Home = () => (
               </div>
             </div>
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-12 my-4">
+          <div className="col-lg-6 col-md-12 my-4">
             <div className="row">
               <div className="col-sm-2">
                 <FontAwesomeIcon icon={faBook} size="4x" />
@@ -149,7 +151,12 @@ const Home = () => (
           <div className="col-12 d-flex row">
             <div className="col-lg-5 order-lg-2">
               <div className={coffee}>
-                <StaticImage src="../../static/coffee.png" alt="coffee" />
+                <StaticImage
+                  src="../../static/coffee.png"
+                  height={512}
+                  width={494}
+                  alt="coffee"
+                />
                 <div className={imgScroll}>
                   <div className={slide}></div>
                 </div>
@@ -173,12 +180,10 @@ const Home = () => (
               <p className="lead">
                 We can also assist if you find yourself on the wrong side of the
                 IRS. We're here to help you resolve your tax problems and put an
-                end to the misery that the IRS can put you through. 
+                end to the misery that the IRS can put you through.
               </p>
               <p className="lead fw-bold text-center mt-4">
-                Please call us today at{" "}
-                <CallLink />. Thanks for
-                visiting!
+                Please call us today at <CallLink />. Thanks for visiting!
               </p>
             </div>
             <div className="col-lg-1 order-lg-1"></div>

@@ -5,7 +5,6 @@ import {
   faLock,
   faFeed,
   faEnvelope,
-  faPhone,
   faNavicon,
 } from "@fortawesome/free-solid-svg-icons"
 import Offcanvas from "react-bootstrap/Offcanvas"

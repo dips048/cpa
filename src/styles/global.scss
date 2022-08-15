@@ -6,15 +6,23 @@ $bg-color-1: #f4fafc;
 $bg-color-2: rgba(22, 22, 22, 1);
 $bg-color-3: #1053b8;
 
-$hover-color-1:  rgb(216, 216, 216);
-$hover-color-2:  rgba(255, 255, 255, 0.1);
+$hover-color-1: rgb(216, 216, 216);
+$hover-color-2: rgba(255, 255, 255, 0.1);
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: $color-1;
   background: $bg-color-1;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .icon-color {
@@ -29,12 +37,12 @@ a.disabled {
 
 .heading {
   background-color: $bg-color-3;
-  color: $color-2;  
+  color: $color-2;
 }
 
 .footer-nav {
   color: $color-2;
-  background: $bg-color-2;  
+  background: $bg-color-2;
   padding: 1em;
 
   a {
@@ -49,20 +57,11 @@ a.disabled {
   }
 }
 
-// button {
-//   background: $bg-color-3;
-//   border-color: $bg-color-3;
-//   color: $color-2 ;
-//   text-align: center;
-//   text-decoration: none;
-//   display: inline-block;
-//   box-shadow: none;
-// }
+.btn.btn-default:hover {
+  background-color: $bg-color-3;
+  color: #fff;
+}
 
-// button:hover {
-//   background: $hover-color-3;
-//   border-color: $hover-color-3;
-// }
 
 .sidebar {
   flex-shrink: 0;
@@ -72,7 +71,7 @@ a.disabled {
 
   a {
     display: block;
-    padding: .5em;
+    padding: 0.5em;
   }
 }
 
@@ -96,14 +95,14 @@ a.disabled {
 .sidebar-title .toggle-btn {
   cursor: pointer;
   transition: transform 0.3s;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .open > .sidebar-title .toggle-btn {
   transform: rotate(180deg);
 }
 
-.sidebar-content { 
+.sidebar-content {
   height: 0;
   overflow: hidden;
   padding-left: 1em;
@@ -132,5 +131,5 @@ a.disabled {
 
 .offcanvas-header .btn-close {
   color: $color-2;
-  padding: .5em;
+  padding: 0.5em;
 }

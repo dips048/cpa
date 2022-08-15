@@ -1,5 +1,7 @@
 import * as React from "react"
 import { container } from "./newsletter.module.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFeed } from "@fortawesome/free-solid-svg-icons"
 
 const Newsletter = () => {
   return (
@@ -8,10 +10,12 @@ const Newsletter = () => {
       <p>
         Subscribe to our newsletter to receive news, updates, and valuable tips.
       </p>
-      <div>
-        <form>
+      <div className="mx-auto">
+        <form className="col-sm-8 mx-auto d-inline">
           <input type="text" name="email" placeholder="Email" />
-          <input type="submit" value="Submit" />
+          <button type="submit" name="submit" className="btn btn-primary">
+            <FontAwesomeIcon icon={faFeed } />
+          </button>
         </form>
       </div>
     </div>

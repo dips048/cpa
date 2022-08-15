@@ -7,6 +7,7 @@ import Breadcrumb from "../components/breadcrumb"
 import { Container } from "react-bootstrap"
 import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const Page = ({ data }) => {
   return (
@@ -95,8 +96,8 @@ const Page = ({ data }) => {
                 width={260}
                 height={400}
               />
-              <button className="btn btn-primary">
-                Request A Free Consultation
+              <button className="btn btn-primary btn-lg">
+                <Link to="/contact">Request A Free Consultation</Link>
               </button>
             </div>
           </div>
