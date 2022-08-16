@@ -499,5 +499,15 @@ module.exports = {
     "gatsby-plugin-netlify",
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i`,
+          `Rubik:300,300i,400,400i,500,500i,700,700i,900,900i`
+        ],
+        display: 'swap'
+      }
+    }
   ],
 }
