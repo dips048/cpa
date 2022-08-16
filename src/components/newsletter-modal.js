@@ -1,6 +1,6 @@
 import * as React from "react"
 import Modal from "react-bootstrap/Modal"
-import Newsletter from "./footer/newsletter"
+import Newsletter from "./newsletter"
 
 const NewsletterModal = props => {
   return (

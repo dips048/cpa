@@ -2,16 +2,20 @@ import * as React from "react"
 import FooterNav from "./footer-nav"
 import Newsletter from "./newsletter"
 import { Container } from "react-bootstrap"
-import CallLink from "../callLink"
+import CallLink from "./callLink"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faComment, faCalendar, faCopy } from "@fortawesome/free-regular-svg-icons"
+import {
+  faComment,
+  faCalendar, 
+  faCopy,
+} from "@fortawesome/free-regular-svg-icons"
 
 const Footer = ({ menuLinks, companyName }) => (
   <footer>
     <Container className="row text-center mx-auto">
-      <div className="col-lg-4 col-md-6 my-3 mx-auto text-center  ">
-        <div class="icon-color">
+      <div className="col-lg-4 col-md-6 my-3 mx-auto text-center">
+        <div className="icon-color">
           <FontAwesomeIcon icon={faComment} size="5x" />
         </div>
         <h3>Ask a Question</h3>
@@ -24,8 +28,8 @@ const Footer = ({ menuLinks, companyName }) => (
         </button>
       </div>
       <div className="col-lg-4 col-md-6 my-3 mx-auto text-center">
-        <div class="icon-color">
-          <FontAwesomeIcon icon={faCalendar} size="5x" />
+        <div className="icon-color">
+          <FontAwesomeIcon icon={faCalendar} size="5x" /> 
         </div>
         <h3>We Are Here to Help</h3>
         <p>
@@ -37,7 +41,7 @@ const Footer = ({ menuLinks, companyName }) => (
         </button>
       </div>
       <div className="col-lg-4 col-md-6 my-3 mx-auto text-center">
-      <div class="icon-color">
+        <div className="icon-color">
           <FontAwesomeIcon icon={faCopy} size="5x" />
         </div>
         <h3>Send Us a File</h3>

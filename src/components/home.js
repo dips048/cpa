@@ -48,13 +48,6 @@ const Home = () => (
       className="d-flex"
       style={{ backgroundColor: "#1053b8", color: "#fff" }}
     >
-      {/* <div className={pattern1}></div>
-      <div className={globe}>
-        <div className={globe1}></div>
-        <div className={globe2}></div>
-        <div className={globe3}></div>
-        <div className={globe4}></div>
-      </div> */}
       <Container style={{ zIndex: 1 }}>
         <div className="row pt-5">
           <div className="col-lg-12">
@@ -69,12 +62,12 @@ const Home = () => (
           </div>
         </div>
         <div
-          className="row my-5 px-3 align-xs-center text-center text-sm-start d-flex"
+          className="row my-5 mx-3 align-xs-center text-center text-sm-start d-flex"
           style={{ backgroundColor: "#fff", color: "#2d3e50" }}
         >
           <div className="col-lg-6 col-md-12 my-4">
             <div className="row">
-              <div className="col-sm-2">
+              <div className="col-sm-2 icon-color text-center">
                 <FontAwesomeIcon icon={faCompass} size="4x" />
               </div>
               <div className="col-sm-10">
@@ -91,7 +84,7 @@ const Home = () => (
           </div>
           <div className="col-lg-6 col-md-12 my-4">
             <div className="row">
-              <div className="col-sm-2">
+              <div className="col-sm-2 icon-color text-center">
                 <FontAwesomeIcon icon={faBriefcase} size="4x" />
               </div>
               <div className="col-sm-10">
@@ -106,7 +99,7 @@ const Home = () => (
           </div>
           <div className="col-lg-6 col-md-12 my-4">
             <div className="row">
-              <div className="col-sm-2">
+              <div className="col-sm-2 icon-color text-center">
                 <FontAwesomeIcon icon={faCalculator} size="4x" />
               </div>
               <div className="col-sm-10">
@@ -121,7 +114,7 @@ const Home = () => (
           </div>
           <div className="col-lg-6 col-md-12 my-4">
             <div className="row">
-              <div className="col-sm-2">
+              <div className="col-sm-2 icon-color text-center">
                 <FontAwesomeIcon icon={faBook} size="4x" />
               </div>
               <div className="col-sm-10">

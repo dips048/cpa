@@ -1,6 +1,6 @@
 import * as React from "react"
 import Header from "./header"
-import Footer from "./footer/footer"
+import Footer from "./footer"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Layout = ({ children }) => {

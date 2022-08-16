@@ -2,9 +2,13 @@ import * as React from "react"
 import { navLinks, linkConatainer } from "./footer-nav.module.scss"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons"
 import { Container } from "react-bootstrap"
-import CallLink from "../callLink"
+import CallLink from "./callLink"
 
 const FooterNav = ({ menuLinks, companyName }) => {
   return (
@@ -71,22 +75,22 @@ const FooterNav = ({ menuLinks, companyName }) => {
               listStyle: "none",
             }}
           >
-            <li style={{paddingLeft: '.5em'}} key={companyName + "2"}>
+            <li style={{ paddingLeft: ".5em" }} key={companyName + "2"}>
               <a href="?">© {companyName} 2022</a>
             </li>
-            <li style={{paddingLeft: '.5em'}} key="siteMap">
+            <li style={{ paddingLeft: ".5em" }} key="siteMap">
               <a href="?">Site Map</a>
             </li>
-            <li style={{paddingLeft: '.5em'}} key="privacyPolicy">
+            <li style={{ paddingLeft: ".5em" }} key="privacyPolicy">
               <a href="?">Privacy Policy</a>
             </li>
-            <li style={{paddingLeft: '.5em'}} key="disclaimer">
+            <li style={{ paddingLeft: ".5em" }} key="disclaimer">
               <a href="?">Disclaimer</a>
             </li>
           </ul>
           <div className="text-center">
             <a className="m-1" href="https://www.facebook.com" title="Facebook">
-              <FontAwesomeIcon icon={faFacebook}/>
+              <FontAwesomeIcon icon={faFacebook} />
             </a>
             <a className="m-1" href="https://www.twitter.com" title="Twitter">
               <FontAwesomeIcon icon={faTwitter} />
