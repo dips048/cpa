@@ -150,9 +150,9 @@ const Home = () => (
                   width={494}
                   alt="coffee"
                 />
-                <div className={imgScroll}>
+                {/* <div className={imgScroll}>
                   <div className={slide}></div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-6 order-lg-1">
