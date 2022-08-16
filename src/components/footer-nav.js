@@ -1,5 +1,5 @@
 import * as React from "react"
-import { navLinks, linkConatainer } from "./footer-nav.module.scss"
+import { navLinks, linkConatainer, linkConatainerB } from "./footer-nav.module.scss"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -67,24 +67,18 @@ const FooterNav = ({ menuLinks, companyName }) => {
         <div className={linkConatainer}>
           <ul
             key="ul-4"
-            className={linkConatainer}
-            style={{
-              padding: 0,
-              justifyContent: "left",
-              gap: 1,
-              listStyle: "none",
-            }}
+            className={linkConatainerB}
           >
-            <li style={{ paddingLeft: ".5em" }} key={companyName + "2"}>
+            <li className="ps-2" key={companyName + "2"}>
               <a href="?">© {companyName} 2022</a>
             </li>
-            <li style={{ paddingLeft: ".5em" }} key="siteMap">
+            <li className="ps-2" key="siteMap">
               <a href="?">Site Map</a>
             </li>
-            <li style={{ paddingLeft: ".5em" }} key="privacyPolicy">
+            <li className="ps-2" key="privacyPolicy">
               <a href="?">Privacy Policy</a>
             </li>
-            <li style={{ paddingLeft: ".5em" }} key="disclaimer">
+            <li className="ps-2" key="disclaimer">
               <a href="?">Disclaimer</a>
             </li>
           </ul>

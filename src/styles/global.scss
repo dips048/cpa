@@ -5,6 +5,7 @@ $color-2: #f4fafc;
 $bg-color-1: #f4fafc;
 $bg-color-2: rgba(22, 22, 22, 1);
 $bg-color-3: #0d6efd;
+$bg-color-4: #1053b8;
 
 $hover-color-1: rgb(216, 216, 216);
 $hover-color-2: rgba(255, 255, 255, 0.1);
@@ -15,6 +16,16 @@ body {
   font-size: 16px;
   color: $color-1;
   background: $bg-color-1;
+}
+
+.default-color {
+  color: $color-1;
+  background: $bg-color-1;
+}
+
+.theme-color {
+  color: $color-2;
+  background: $bg-color-4;
 }
 
 a {
@@ -53,13 +64,14 @@ a.disabled {
 
 .btn.btn-primary {
   a {
-    color: #fff;
+    color: $color-2;
   }
 }
 
 .btn.btn-default:hover {
   background-color: $bg-color-3;
-  color: #fff;
+  color: $color-2;
+  border: 1px solid $bg-color-3;
 }
 
 
@@ -82,7 +94,7 @@ a.disabled {
   border-radius: 5px;
 }
 
-.sidebar-item:hover {
+.sidebar-item:hover, .toggle-btn:hover {
   background-color: $hover-color-2;
 }
 

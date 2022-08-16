@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
-import Dropdown from "./dropdown"
+import NavList from "./nav-list"
 import { Container } from "react-bootstrap"
 import List from "./list"
 import LoginModal from "./login-modal"
@@ -12,7 +12,7 @@ const Header = ({ companyName, menuLinks }) => {
   const [newsletterModal, setNewsletterModal] = useState(false)
 
   return (
-    <div style={{ zIndex: 1 }}>
+    <div>
       <List
         show={modalShow}
         nlShow={newsletterModal}
@@ -37,7 +37,7 @@ const Header = ({ companyName, menuLinks }) => {
       <Container className="d-flex justify-content-center justify-content-lg-between py-2">
         <h1>{companyName}</h1>
         <div className="d-none d-lg-flex">
-          <Dropdown menuLinks={menuLinks}></Dropdown>
+          <NavList menuLinks={menuLinks}></NavList>
         </div>
       </Container>
     </div>
