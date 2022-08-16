@@ -19,7 +19,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
             if (link.name === "Resources") {
               return (
                 <ul key="ul-1" className={navLinks}>
-                  <h4>{link.name}</h4>
+                  <h3>{link.name}</h3>
                   {link.subLinks?.map((subLink, i) => {
                     return (
                       <li key={subLink.url + i}>
@@ -35,7 +35,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
             if (link.name === "Tax Center") {
               return (
                 <ul key="ul-2" className={navLinks}>
-                  <h4>{link.name}</h4>
+                  <h3>{link.name}</h3>
                   {link.subLinks?.map((subLink, i) => {
                     return (
                       <li key={subLink.url + i}>
@@ -51,7 +51,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
             return null
           })}
           <ul key="ul-3" className={navLinks}>
-            <h4>Contact</h4>
+            <h3>Contact</h3>
             <li key={companyName + "1"}>{companyName}</li>
             <li key="call-link">
               <CallLink />

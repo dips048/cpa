@@ -71,7 +71,7 @@ const Home = () => (
                 <FontAwesomeIcon icon={faCompass} size="4x" />
               </div>
               <div className="col-sm-10">
-                <h4>Services For Individuals</h4>
+                <h3>Services For Individuals</h3>
                 <p>
                   You get one-on-one guidance that helps manage risk and improve
                   performance.
@@ -88,7 +88,7 @@ const Home = () => (
                 <FontAwesomeIcon icon={faBriefcase} size="4x" />
               </div>
               <div className="col-sm-10">
-                <h4>Business Services</h4>
+                <h3>Business Services</h3>
                 <p>
                   We take care of your business for you, so you can get back to
                   the job of running your business.
@@ -103,7 +103,7 @@ const Home = () => (
                 <FontAwesomeIcon icon={faCalculator} size="4x" />
               </div>
               <div className="col-sm-10">
-                <h4>Tax Services</h4>
+                <h3>Tax Services</h3>
                 <p>
                   We pride ourselves on being very efficient, affordable, and of
                   course, extremely discreet.
@@ -118,7 +118,7 @@ const Home = () => (
                 <FontAwesomeIcon icon={faBook} size="4x" />
               </div>
               <div className="col-sm-10">
-                <h4>QuickBooks Services</h4>
+                <h3>QuickBooks Services</h3>
                 <p>
                   QuickBooks is the ideal business accounting software for small
                   to mid-sized business owners.
