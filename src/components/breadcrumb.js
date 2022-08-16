@@ -15,7 +15,7 @@ function Breadcrumb(props) {
   return (
     <Container>
       <ol
-        className="d-flex flex-row justify-content-center justify-content-lg-start p-0"
+        className="d-flex flex-row justify-content-center justify-content-lg-start p-0 m-0"
         style={{ listStyle: "none" }}
       >
         <li key={"home"}>

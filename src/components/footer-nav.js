@@ -1,5 +1,9 @@
 import * as React from "react"
-import { navLinks, linkConatainer, linkConatainerB } from "./footer-nav.module.scss"
+import {
+  navLinks,
+  linkConatainer,
+  linkConatainerB,
+} from "./footer-nav.module.scss"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -19,7 +23,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
             if (link.name === "Resources") {
               return (
                 <ul key="ul-1" className={navLinks}>
-                  <h3>{link.name}</h3>
+                  <li key="resources-ul-1"><h3>{link.name}</h3></li>
                   {link.subLinks?.map((subLink, i) => {
                     return (
                       <li key={subLink.url + i}>
@@ -35,7 +39,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
             if (link.name === "Tax Center") {
               return (
                 <ul key="ul-2" className={navLinks}>
-                  <h3>{link.name}</h3>
+                  <li key="tax-center-ul-2"><h3>{link.name}</h3></li>
                   {link.subLinks?.map((subLink, i) => {
                     return (
                       <li key={subLink.url + i}>
@@ -51,7 +55,7 @@ const FooterNav = ({ menuLinks, companyName }) => {
             return null
           })}
           <ul key="ul-3" className={navLinks}>
-            <h3>Contact</h3>
+            <li key="contact-ul-3"><h3>Contact</h3></li>
             <li key={companyName + "1"}>{companyName}</li>
             <li key="call-link">
               <CallLink />
@@ -65,12 +69,9 @@ const FooterNav = ({ menuLinks, companyName }) => {
         </div>
         <hr></hr>
         <div className={linkConatainer}>
-          <ul
-            key="ul-4"
-            className={linkConatainerB}
-          >
+          <ul key="ul-4" className={linkConatainerB}>
             <li className="ps-2" key={companyName + "2"}>
-              <a href="?">© {companyName} 2022</a>
+              <span>© {companyName} 2022</span>
             </li>
             <li className="ps-2" key="siteMap">
               <a href="?">Site Map</a>
