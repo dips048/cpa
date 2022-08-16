@@ -1,4 +1,5 @@
 import React from "react"
+import { useState } from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
@@ -7,9 +8,10 @@ import Breadcrumb from "../components/breadcrumb"
 import { Container } from "react-bootstrap"
 import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
+import ContactUsModel from "../components/contact-us-modal"
 
 const Page = ({ data }) => {
+  const [modalShow, setModalShow] = useState(false)
   return (
     <Layout>
       <Breadcrumb crumbs={data.mdx.frontmatter.url.split("/")}></Breadcrumb>
@@ -85,20 +87,24 @@ const Page = ({ data }) => {
           </div>
           <div className="col-lg-1"></div>
           <div className="col-lg-4 d-none d-lg-block">
-            <div
-              className="text-center"
-              style={{ position: "sticky", top: "0" }}
-            >
+            <div className="text-center position-sticky top-0">
               <StaticImage
-                style={{ margin: "0 auto" }}
+                className="mx-auto"
                 src="../../static/woman-1.png"
                 alt="woman-1"
                 width={260}
                 height={400}
               />
-              <button className="btn btn-primary btn-lg">
-                <Link to="/contact">Request A Free Consultation</Link>
+              <button
+                className="btn btn-primary btn-lg"
+                onClick={() => setModalShow(true)}
+              >
+                Request A Free Consultation
               </button>
+              <ContactUsModel
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+              />
             </div>
           </div>
         </div>
