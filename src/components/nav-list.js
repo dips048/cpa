@@ -7,11 +7,11 @@ import {
   subLinkContainer1,
   subLinkContainer2,
   subLinkContainer3,
-} from "./dropdown.module.scss"
+} from "./nav-list.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown, faAngleLeft } from "@fortawesome/free-solid-svg-icons"
 
-const Dropdown = ({ menuLinks }) => (
+const NavList = ({ menuLinks }) => (
   <ul className={linkContainer}>
     {menuLinks.map((link1, i) => (
       <li className={linkItem} key={link1.url + "-" + i}>
@@ -19,8 +19,7 @@ const Dropdown = ({ menuLinks }) => (
           {link1.name}
           {link1.subLinks.length > 0 && (
             <FontAwesomeIcon
-              style={{ paddingLeft: ".5em" }}
-              className="toggle-btn"
+              className="toggle-btn ps-2"
               icon={faAngleDown}
             ></FontAwesomeIcon>
           )}
@@ -31,8 +30,7 @@ const Dropdown = ({ menuLinks }) => (
               <Link to={link1.url + link2.url} className={navLinkText}>
                 {link2.subLinks.length > 0 && (
                   <FontAwesomeIcon
-                    style={{ paddingRight: ".5em" }}
-                    className="toggle-btn"
+                    className="toggle-btn pe-2"
                     icon={faAngleLeft}
                   ></FontAwesomeIcon>
                 )}
@@ -47,8 +45,7 @@ const Dropdown = ({ menuLinks }) => (
                     >
                       {link3.subLinks.length > 0 && (
                         <FontAwesomeIcon
-                          style={{ paddingRight: ".5em" }}
-                          className="toggle-btn"
+                          className="toggle-btn pe-2"
                           icon={faAngleLeft}
                         ></FontAwesomeIcon>
                       )}
@@ -63,8 +60,7 @@ const Dropdown = ({ menuLinks }) => (
                           >
                             {link4.subLinks && link4.subLinks.length > 0 && (
                               <FontAwesomeIcon
-                                style={{ paddingRight: ".5em" }}
-                                className="toggle-btn"
+                                className="toggle-btn pe-2"
                                 icon={faAngleLeft}
                               ></FontAwesomeIcon>
                             )}
@@ -84,4 +80,4 @@ const Dropdown = ({ menuLinks }) => (
   </ul>
 )
 
-export default Dropdown
+export default NavList

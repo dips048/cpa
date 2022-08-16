@@ -25,13 +25,17 @@
 }
 
 .link-container .link-item a:hover {
-  background: rgb(216, 216, 216);
+  // background: rgb(216, 216, 216);
+  background-color: $bg-color-3;
+  color: $color-2;
+  border: 1px solid $color-2;
 }
 
 .link-container .link-item .sub-link-container-1 {
   z-index: 99;
   position: absolute;
-  background-color: rgb(235, 235, 235);
+  // background-color: rgb(235, 235, 235);
+  background-color: $color-2;
   width: auto;
   list-style: none;
   padding: 0;
@@ -52,7 +56,8 @@
 .sub-link-container-1 li .sub-link-container-2 {
   z-index: 99;
   position: absolute;
-  background-color: rgb(235, 235, 235);
+  // background-color: rgb(235, 235, 235);
+  background-color: $color-2;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -69,7 +74,8 @@
 .sub-link-container-2 li .sub-link-container-3 {
   z-index: 99;
   position: absolute;
-  background-color: rgb(235, 235, 235);
+  // background-color: rgb(235, 235, 235);
+  background-color: $color-2;
   list-style: none;
   padding: 0;
   margin: 0;
