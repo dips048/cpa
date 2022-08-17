@@ -20,23 +20,23 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
     <div>
       <div className="d-flex justify-content-between d-lg-none py-2">
         <span className="flex-grow-1 text-center icon-color" onClick={onShow}>
-          <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faLock} size="sm"></FontAwesomeIcon>
         </span>
         <span className="flex-grow-1 text-center icon-color" onClick={onNlshow}>
-          <FontAwesomeIcon icon={faFeed}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faFeed} size="sm"></FontAwesomeIcon>
         </span>
         <a
           className="flex-grow-1 text-center icon-color"
           href="mailto:support@cpasitesolutions.com"
         >
-          <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faEnvelope} size="sm"></FontAwesomeIcon>
         </a>
         <CallLink icon={true} className="flex-grow-1 text-center icon-color" />
         <span
           className="flex-grow-1 text-center icon-color"
           onClick={handleShow}
         >
-          <FontAwesomeIcon icon={faNavicon}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faNavicon} size="sm"></FontAwesomeIcon>
         </span>
       </div>
 

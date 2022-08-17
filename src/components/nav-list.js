@@ -21,6 +21,7 @@ const NavList = ({ menuLinks }) => (
             <FontAwesomeIcon
               className="toggle-btn ps-2"
               icon={faAngleDown}
+              size="sm"
             ></FontAwesomeIcon>
           )}
         </Link>
@@ -32,6 +33,7 @@ const NavList = ({ menuLinks }) => (
                   <FontAwesomeIcon
                     className="toggle-btn pe-2"
                     icon={faAngleLeft}
+                    size="sm"
                   ></FontAwesomeIcon>
                 )}
                 {link2.name}
@@ -47,6 +49,7 @@ const NavList = ({ menuLinks }) => (
                         <FontAwesomeIcon
                           className="toggle-btn pe-2"
                           icon={faAngleLeft}
+                          size="sm"
                         ></FontAwesomeIcon>
                       )}
                       {link3.name}
@@ -62,6 +65,7 @@ const NavList = ({ menuLinks }) => (
                               <FontAwesomeIcon
                                 className="toggle-btn pe-2"
                                 icon={faAngleLeft}
+                                size="sm"
                               ></FontAwesomeIcon>
                             )}
                             {link4.name}
