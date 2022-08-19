@@ -16,7 +16,7 @@ const Footer = ({ menuLinks, companyName }) => (
     <Container className="row text-center mx-auto">
       <div className="col-lg-4 col-md-6 my-3 mx-auto text-center">
         <div className="icon-color">
-          <FontAwesomeIcon icon={faComment} size="5x" />
+          <FontAwesomeIcon data-testid="fa-icon" icon={faComment} size="5x" />
         </div>
         <h3>Ask a Question</h3>
         <p>
@@ -29,7 +29,7 @@ const Footer = ({ menuLinks, companyName }) => (
       </div>
       <div className="col-lg-4 col-md-6 my-3 mx-auto text-center">
         <div className="icon-color">
-          <FontAwesomeIcon icon={faCalendar} size="5x" /> 
+          <FontAwesomeIcon data-testid="fa-icon" icon={faCalendar} size="5x" /> 
         </div>
         <h3>We Are Here to Help</h3>
         <p>
@@ -42,7 +42,7 @@ const Footer = ({ menuLinks, companyName }) => (
       </div>
       <div className="col-lg-4 col-md-6 my-3 mx-auto text-center">
         <div className="icon-color">
-          <FontAwesomeIcon icon={faCopy} size="5x" />
+          <FontAwesomeIcon data-testid="fa-icon" icon={faCopy} size="5x" />
         </div>
         <h3>Send Us a File</h3>
         <p>

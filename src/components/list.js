@@ -36,7 +36,7 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
           className="flex-grow-1 text-center icon-color"
           onClick={handleShow}
         >
-          <FontAwesomeIcon icon={faNavicon} size="sm"></FontAwesomeIcon>
+          <FontAwesomeIcon data-testid="fa-icon-menu" icon={faNavicon} size="sm"></FontAwesomeIcon>
         </span>
       </div>
 

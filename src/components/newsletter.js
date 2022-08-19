@@ -14,7 +14,7 @@ const Newsletter = () => {
         <form className="col-sm-8 mx-auto d-inline">
           <input type="text" name="email" placeholder="Email" />
           <button type="submit" name="submit" aria-label="submit" className="btn btn-primary">
-            <FontAwesomeIcon icon={faFeed } />
+            <FontAwesomeIcon data-testid="fa-icon" icon={faFeed } />
           </button>
         </form>
       </div>

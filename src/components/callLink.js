@@ -6,7 +6,7 @@ const CallLink = props => {
   const number = props.number ? props.number : "(800) 896-4500"
   return (
     <a href={"tel:" + number} style={props.style} className={props.className}>
-      {props.icon ? <FontAwesomeIcon icon={faPhone} size="sm"></FontAwesomeIcon> : number}
+      {props.icon ? <FontAwesomeIcon data-testid="fa-icon" icon={faPhone} size="sm"></FontAwesomeIcon> : number}
     </a>
   )
 }
