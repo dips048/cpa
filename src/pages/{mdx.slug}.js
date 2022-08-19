@@ -60,7 +60,7 @@ const Page = ({ data }) => {
                       placeholder="Leave a comment here"
                     ></textarea>
                   </div>
-                  <div className="mb-3 form-check">
+                  {/* <div className="mb-3 form-check">
                     <input
                       type="checkbox"
                       id="checkBox"
@@ -72,11 +72,11 @@ const Page = ({ data }) => {
                   </div>
                   <div className="mb-3">
                     <input type="" className="form-control" />
-                  </div>
-                  <div className="d-flex justify-content-between">
-                    <a id="captcha_refresh" href="?">
+                  </div> */}
+                  <div className="d-flex justify-content-end">
+                    {/* <a id="captcha_refresh" href="?">
                       [ Show a different Image ]
-                    </a>
+                    </a> */}
                     <button type="submit" className="btn btn-primary">
                       Send
                     </button>
