@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallLink renders correctly 1`] = `
+<a
+  href="tel:(800) 896-4500"
+>
+  (800) 896-4500
+</a>
+`;
