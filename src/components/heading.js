@@ -1,5 +1,5 @@
 import React from "react"
-// import { pattern1, globe, globe1, globe2, globe3, globe4 } from "./heading.module.scss"
+// import { pattern1, globe, globe1, globe2, globe3, globe4 } from "../styles/heading.module.scss"
 import { Container } from "react-bootstrap"
 
 const Heading = ({ title }) => {

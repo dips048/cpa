@@ -3,7 +3,7 @@ import {
   navLinks,
   linkConatainer,
   linkConatainerB,
-} from "./footer-nav.module.scss"
+} from "../styles/footer-nav.module.scss"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {

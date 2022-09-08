@@ -11,10 +11,10 @@ import {
 import { Link } from "gatsby"
 import {
   coffee,
-  imgScroll,
-  slide,
+  // imgScroll,
+  // slide,
   // pattern1, globe, globe1, globe2, globe3, globe4
-} from "./home.module.scss"
+} from "../styles/home.module.scss"
 import { StaticImage } from "gatsby-plugin-image"
 import CallLink from "./callLink"
 import ContactUsModel from "./contact-us-modal"

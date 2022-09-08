@@ -7,7 +7,7 @@ import {
   subLinkContainer1,
   subLinkContainer2,
   subLinkContainer3,
-} from "./nav-list.module.scss"
+} from "../styles/nav-list.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown, faAngleLeft } from "@fortawesome/free-solid-svg-icons"
 

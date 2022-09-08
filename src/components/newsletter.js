@@ -1,5 +1,5 @@
 import * as React from "react"
-import { container } from "./newsletter.module.scss"
+import { container } from "../styles/newsletter.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFeed } from "@fortawesome/free-solid-svg-icons"
 
