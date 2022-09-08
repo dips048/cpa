@@ -13,7 +13,7 @@ import {
   coffee,
   // imgScroll,
   // slide,
-  // pattern1, globe, globe1, globe2, globe3, globe4
+  pattern1, globe, globe1, globe2, globe3, globe4
 } from "../styles/home.module.scss"
 import { StaticImage } from "gatsby-plugin-image"
 import CallLink from "./callLink"
@@ -43,14 +43,27 @@ const Home = () => {
               We offer services for business owners, executives, and
               individuals.
             </p>
-            <button className="btn btn-primary btn-lg"  onClick={() => setModalShow(true)}>
+            <button
+              className="btn btn-primary btn-lg"
+              onClick={() => setModalShow(true)}
+            >
               Free Consultation
             </button>
-            <ContactUsModel show={modalShow} onHide={() => setModalShow(false)} />
+            <ContactUsModel
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
           </div>
         </div>
       </Container>
       <div className="d-flex theme-color">
+        <div className={pattern1}></div>
+        <div className={globe}>
+          <div className={globe1}></div>
+          <div className={globe2}></div>
+          <div className={globe3}></div>
+          <div className={globe4}></div>
+        </div>
         <Container style={{ zIndex: 1 }}>
           <div className="row pt-5">
             <div className="col-lg-12">

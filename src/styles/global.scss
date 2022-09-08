@@ -4,8 +4,8 @@ $color-1: #2d3e50;
 $color-2: #f4fafc;
 $bg-color-1: #f4fafc;
 $bg-color-2: rgba(22, 22, 22, 1);
-$bg-color-3: #3082fc; 
-$bg-color-4: #1053b8;
+$bg-color-3: #2d82a1; 
+$bg-color-4: #2da1a0;
 
 $hover-color-1: rgb(216, 216, 216);
 $hover-color-2: rgba(255, 255, 255, 0.1);
@@ -29,15 +29,17 @@ body {
 }
 
 a {
+  color: $bg-color-4;
   text-decoration: none;
 }
 
 a:hover {
+  color: $bg-color-3;
   text-decoration: underline;
 }
 
 .icon-color {
-  color: $bg-color-3;
+  color: $bg-color-4;
 }
 
 a.disabled {
@@ -62,6 +64,16 @@ a.disabled {
   }
 }
 
+.btn-default:hover, .btn-default:active:hover, .btn-primary, .btn-primary:focus, .btn-primary:active {
+  background: $bg-color-4;
+  border-color: $bg-color-4;
+}
+
+.btn-primary:hover, .btn-primary:active:hover {
+  background: $bg-color-3;
+  border-color: $bg-color-3;
+}
+
 .btn.btn-primary {
   a {
     color: $color-2;
@@ -69,9 +81,9 @@ a.disabled {
 }
 
 .btn.btn-default:hover {
-  background-color: $bg-color-3;
+  background-color: $bg-color-4;
   color: $color-2;
-  border: 1px solid $bg-color-3;
+  border: 1px solid $bg-color-4;
 }
 
 
