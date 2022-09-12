@@ -1,5 +1,12 @@
 import React from "react"
-import { pattern1, globe, globe1, globe2, globe3, globe4 } from "../styles/home.module.scss"
+import {
+  pattern1,
+  globe,
+  globe1,
+  globe2,
+  globe3,
+  globe4,
+} from "../styles/home.module.scss"
 import { Container } from "react-bootstrap"
 
 const Heading = ({ title }) => {
@@ -12,7 +19,7 @@ const Heading = ({ title }) => {
         <div className={globe3}></div>
         <div className={globe4}></div>
       </div>
-      <Container>
+      <Container style={{ zIndex: 1 }}>
         <div className="row py-5">
           <h1>{title}</h1>
         </div>

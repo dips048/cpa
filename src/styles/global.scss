@@ -147,6 +147,10 @@ a.disabled {
   text-decoration: underline;
 }
 
+.offcanvas {
+  max-width: 90vw;
+}
+
 .offcanvas-header {
   color: $color-2;
   background-color: $bg-color-2;
