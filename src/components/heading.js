@@ -12,7 +12,7 @@ import { Container } from "react-bootstrap"
 const Heading = ({ title }) => {
   return (
     <div className="heading">
-      <div className={pattern1}></div>
+      {/* <div className={pattern1}></div> */}
       <div className={globe}>
         <div className={globe1}></div>
         <div className={globe2}></div>
