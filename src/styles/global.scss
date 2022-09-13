@@ -1,14 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
-
-$color-1: #2d3e50;
-$color-2: #f4fafc;
-$bg-color-1: #f4fafc;
-$bg-color-2: rgba(22, 22, 22, 1);
-$bg-color-3: #2d82a1;
-$bg-color-4: #2da1a0;
-
-$hover-color-1: rgb(216, 216, 216);
-$hover-color-2: rgba(255, 255, 255, 0.1);
+@import "./variables.scss";
 
 body {
   font-family: "Roboto", sans-serif;
@@ -18,6 +9,14 @@ body {
   background: $bg-color-1;
 }
 
+body.modal-open {
+  padding-right: 0 !important;
+}
+
+.modal-backdrop {
+  height: 100%;
+}
+
 .default-color {
   color: $color-1;
   background: $bg-color-1;
@@ -25,7 +24,7 @@ body {
 
 .theme-color {
   color: $color-2;
-  background: $bg-color-4;
+  background: $bg-color-3;
 }
 
 a {
@@ -93,7 +92,7 @@ a.disabled {
 
 .sidebar {
   flex-shrink: 0;
-  background-color: $bg-color-2;
+  background-color: $bg-color-1;
   height: 100%;
   overflow: auto;
 
@@ -107,12 +106,12 @@ a.disabled {
   padding: 0 1em;
   display: block;
   transition: background-color 0.15s;
-  border-radius: 5px;
+  // border-radius: 5px;
 }
 
-.sidebar-item:hover,
-.toggle-btn:hover {
-  background-color: $hover-color-2;
+.sidebar-item:hover {
+  color: $color-2;
+  background-color: $bg-color-4;
 }
 
 .sidebar-title {
@@ -121,13 +120,13 @@ a.disabled {
   vertical-align: middle;
 }
 
-.sidebar-title .toggle-btn {
+.sidebar-title .tb-container .toggle-btn {
   cursor: pointer;
   transition: transform 0.3s;
-  padding: 0.5em;
+  margin: auto 0.6em;
 }
 
-.open > .sidebar-title .toggle-btn {
+.open > .sidebar-title  .tb-container .toggle-btn {
   transform: rotate(180deg);
 }
 
@@ -142,14 +141,15 @@ a.disabled {
 }
 
 .sidebar-item.plain {
-  color: $color-2;
+  color: $color-1;
   text-decoration: none;
   display: block;
   flex-grow: 1;
 }
 
 .sidebar-item.plain:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: $color-2;
 }
 
 .offcanvas {
@@ -161,17 +161,30 @@ a.disabled {
 }
 
 .offcanvas-header {
-  color: $color-2;
-  background-color: $bg-color-2;
+  color: $color-1;
+  background-color: $bg-color-1;
   padding: 0.5em;
 }
 
 .offcanvas-header .btn-close {
-  color: $color-2;
+  color: $color-1;
   padding: 0.5em;
 }
 
 .modal {
   width: 100vw;
   height: 100vh;
+}
+
+.pop-animation {
+  animation: pop 2s ease forwards;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -12,7 +12,7 @@ const Header = ({ companyName, menuLinks }) => {
   const [newsletterModal, setNewsletterModal] = useState(false)
 
   return (
-    <div>
+    <React.Fragment>
       <List
         show={modalShow}
         nlShow={newsletterModal}
@@ -40,7 +40,7 @@ const Header = ({ companyName, menuLinks }) => {
           <NavList menuLinks={menuLinks}></NavList>
         </div>
       </Container>
-    </div>
+    </React.Fragment>
   )
 }
 

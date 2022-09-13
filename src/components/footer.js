@@ -13,8 +13,8 @@ import {
 
 const Footer = ({ menuLinks, companyName }) => (
   <footer>
-    <Container className="row text-center mx-auto">
-      <div className="col-lg-4 col-md-6 my-3 mx-auto text-center">
+    <Container className="row text-center mx-auto f-card-container">
+      <div className="col-lg-4 col-md-6 my-3 mx-auto text-center pop-animation">
         <div className="icon-color">
           <FontAwesomeIcon data-testid="fa-icon" icon={faComment} size="5x" />
         </div>
@@ -27,7 +27,7 @@ const Footer = ({ menuLinks, companyName }) => (
           <CallLink />
         </button>
       </div>
-      <div className="col-lg-4 col-md-6 my-3 mx-auto text-center">
+      <div className="col-lg-4 col-md-6 my-3 mx-auto text-center pop-animation">
         <div className="icon-color">
           <FontAwesomeIcon data-testid="fa-icon" icon={faCalendar} size="5x" /> 
         </div>
@@ -40,7 +40,7 @@ const Footer = ({ menuLinks, companyName }) => (
           <Link to="/contact">Contact Us</Link>
         </button>
       </div>
-      <div className="col-lg-4 col-md-6 my-3 mx-auto text-center">
+      <div className="col-lg-4 col-md-6 my-3 mx-auto text-center pop-animation">
         <div className="icon-color">
           <FontAwesomeIcon data-testid="fa-icon" icon={faCopy} size="5x" />
         </div>

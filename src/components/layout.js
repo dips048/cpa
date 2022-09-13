@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div>
+    <React.Fragment>
       <Header
         companyName={data.site.siteMetadata.title}
         menuLinks={data.site.siteMetadata.menuLinks}
@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
         companyName={data.site.siteMetadata.title}
         menuLinks={data.site.siteMetadata.menuLinks}
       />
-    </div>
+    </React.Fragment>
   )
 }
 

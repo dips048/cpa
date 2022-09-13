@@ -8,16 +8,17 @@ export default function SidebarItem({ item }) {
 
   if (item.subLinks && item.subLinks.length) {
     return (
-      <div className={open ? "open" : ""}>
+      <div className={open ? "open" : null}>
         <div className="sidebar-title">
           <a href={item.url || "#"} className="sidebar-item plain">
             {item.name}
           </a>
-          <FontAwesomeIcon
-            className="toggle-btn"
-            onClick={() => setOpen(!open)}
-            icon={faAngleDown}
-          ></FontAwesomeIcon>
+          <div className="tb-container" onClick={() => setOpen(!open)}>
+            <FontAwesomeIcon
+              className="toggle-btn"
+              icon={faAngleDown}
+            ></FontAwesomeIcon>
+          </div>
         </div>
         <div className="sidebar-content">
           {item.subLinks?.map((child, index) => {

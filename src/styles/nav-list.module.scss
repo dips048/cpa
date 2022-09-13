@@ -1,4 +1,4 @@
-@import "../styles/global.scss";
+@import "./variables.scss";
 
 .nav-link-text {
   color: $color-1;
@@ -26,7 +26,7 @@
 
 .link-container .link-item a:hover {
   // background: rgb(216, 216, 216);
-  background-color: $bg-color-3;
+  background-color: $bg-color-4;
   color: $color-2;
 }
 
