@@ -17,7 +17,7 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
   return (
-    <div>
+    <>
       <div className="d-flex justify-content-between d-lg-none py-2">
         <span className="flex-grow-1 text-center icon-color" onClick={onShow}>
           <FontAwesomeIcon icon={faLock} size="sm"></FontAwesomeIcon>
@@ -48,7 +48,7 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
           <Sidebar items={menuLinks} />
         </Offcanvas.Body>
       </Offcanvas>
-    </div>
+    </>
   )
 }
 
