@@ -13,7 +13,12 @@ import {
   coffee,
   // imgScroll,
   // slide,
-  pattern1, globe, globe1, globe2, globe3, globe4
+  // pattern1,
+  globe,
+  globe1,
+  globe2,
+  globe3,
+  globe4,
 } from "../styles/home.module.scss"
 import { StaticImage } from "gatsby-plugin-image"
 import CallLink from "./callLink"
@@ -57,7 +62,7 @@ const Home = () => {
         </div>
       </Container>
       <div className="d-flex theme-color">
-        <div className={pattern1}></div>
+        {/* <div className={pattern1}></div> */}
         <div className={globe}>
           <div className={globe1}></div>
           <div className={globe2}></div>
