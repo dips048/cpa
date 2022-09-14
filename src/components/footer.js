@@ -69,7 +69,9 @@ const Footer = ({ menuLinks, companyName }) => (
         </button>
       </div>
     </Container>
-    <Newsletter />
+    <div data-sal="slide-down" data-sal-duration="2000" data-sal-easing="ease">
+      <Newsletter />
+    </div>
     <FooterNav menuLinks={menuLinks} companyName={companyName} />
   </footer>
 )

@@ -1,6 +1,6 @@
 import React from "react"
 import {
-  pattern1,
+  // pattern1,
   globe,
   globe1,
   globe2,
@@ -21,7 +21,13 @@ const Heading = ({ title }) => {
       </div>
       <Container style={{ zIndex: 1 }}>
         <div className="row py-5">
-          <h1>{title}</h1>
+          <h1
+            data-sal="slide-down"
+            data-sal-duration="2000"
+            data-sal-easing="ease"
+          >
+            {title}
+          </h1>
         </div>
       </Container>
     </div>

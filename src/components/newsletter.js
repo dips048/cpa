@@ -5,12 +5,7 @@ import { faFeed } from "@fortawesome/free-solid-svg-icons"
 
 const Newsletter = () => {
   return (
-    <div
-      className={container}
-      data-sal="zoom-in"
-      data-sal-duration="2000"
-      data-sal-easing="ease"
-    >
+    <div className={container}>
       <h2>Newsletter</h2>
       <p>
         Subscribe to our newsletter to receive news, updates, and valuable tips.

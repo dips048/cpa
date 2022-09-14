@@ -29,7 +29,12 @@ const Home = () => {
   return (
     <div>
       <Container className="d-md-flex">
-        <div className="text-center order-md-2 mx-auto">
+        <div
+          className="text-center order-md-2 mx-auto"
+          data-sal="slide-left"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
+        >
           <StaticImage
             className="mx-auto"
             src="../../static/woman-1.png"
@@ -42,6 +47,9 @@ const Home = () => {
           <div
             className="col-md-8 text-center d-flex flex-column justify-content-center"
             id="home-page-tagline"
+            data-sal="slide-down"
+            data-sal-duration="1000"
+            data-sal-easing="ease"
           >
             <h1>Account On Us</h1>
             <p>
