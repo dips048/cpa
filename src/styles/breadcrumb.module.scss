@@ -1,0 +1,12 @@
+@import "./variables.scss";
+
+.link-style {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-1;
+}
+
+.link-style:hover {
+  color: $bg-color-3;
+  text-decoration: none;
+}

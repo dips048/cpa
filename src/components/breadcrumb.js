@@ -3,16 +3,12 @@ import { Link } from "gatsby"
 import { Container } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouse } from "@fortawesome/free-solid-svg-icons"
-
-const linkStyle = {
-  display: "inline-block",
-  textDecoration: "none",
-}
+import { linkStyle } from "../styles/breadcrumb.module.scss"
 
 function Breadcrumb(props) {
   return (
     <Container className="text-center text-lg-start py-2">
-      <Link style={linkStyle} to="/">
+      <Link className={linkStyle} to="/" key="breadcrumb-link-home">
         <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon> Home
       </Link>
       <>&nbsp;&nbsp;/&nbsp;&nbsp;</>
@@ -23,20 +19,31 @@ function Breadcrumb(props) {
           link = link + props.crumbs[i] + "/"
         }
         return (
-            <Link
-              style={linkStyle}
-              className={last === ci ? "disabled" : ""}
-              to={link}
-              key={"breadcrumb-link" + ci}
-            >
-              {crumb
-                .split("-")
-                .map(
-                  word => word[0].toUpperCase() + word.slice(1).toLowerCase()
-                )
-                .join(" ")}
-                {last !== ci && <>&nbsp;&nbsp;/&nbsp;&nbsp;</>}
-            </Link>
+          <span key={"breadcrumb-link" + ci}>
+            {last !== ci ? (
+              <>
+                <Link className={linkStyle} to={link}>
+                  {crumb
+                    .split("-")
+                    .map(
+                      word =>
+                        word[0].toUpperCase() + word.slice(1).toLowerCase()
+                    )
+                    .join(" ")}
+                </Link>
+                <>{last !== ci && <>&nbsp;&nbsp;/&nbsp;&nbsp;</>}</>
+              </>
+            ) : (
+              <strong>
+                {crumb
+                  .split("-")
+                  .map(
+                    word => word[0].toUpperCase() + word.slice(1).toLowerCase()
+                  )
+                  .join(" ")}
+              </strong>
+            )}
+          </span>
         )
       })}
     </Container>
