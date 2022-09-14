@@ -71,31 +71,64 @@
 .globe-1 {
   background-image: url("../../static/globe-1.svg");
   opacity: 0.7;
+  animation: globe-1 60s infinite ease-in-out;
 }
 
 .globe-2 {
   background-image: url("../../static/globe-2.svg");
   opacity: 0.3;
+  animation: globe-2 60s infinite ease-in-out;
 }
 
 .globe-3 {
   background-image: url("../../static/globe-3.svg");
+  animation: globe-3 240s infinite linear;
 }
 
 .globe-4 {
   background-image: url("../../static/globe-4.svg");
   opacity: 0.5;
+  animation: globe-4 300s infinite linear;
 }
 
-// .pattern-1 {
-//   animation: App-logo-spin infinite 20s linear;
-//   pointer-events: none;
-// }
-// @keyframes App-logo-spin {
-//   from {
-//     transform: rotate (0deg);
-//   }
-// }
-// to {
-//   transform: rotate (360deg);
-// }
+@keyframes globe-1 {
+  0% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes globe-2 {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes globe-3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes globe-4 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
