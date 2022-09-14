@@ -28,12 +28,12 @@ body.modal-open {
 }
 
 a {
-  color: $bg-color-4;
+  color: $bg-color-3;
   text-decoration: none;
 }
 
 a:hover {
-  color: $bg-color-3;
+  color: $bg-color-4;
   text-decoration: underline;
 }
 
@@ -60,6 +60,10 @@ a.disabled {
   a {
     color: $color-2;
     text-decoration: none;
+  }
+
+  a:hover {
+    color: $bg-color-4;
   }
 }
 
