@@ -56,12 +56,19 @@ const Home = () => {
               We offer services for business owners, executives, and
               individuals.
             </p>
-            <button
-              className="btn btn-primary btn-lg"
-              onClick={() => setModalShow(true)}
+            <div
+              data-sal="zoom-in"
+              data-sal-duration="1000"
+              data-sal-easing="ease"
             >
-              Free Consultation
-            </button>
+              <button
+                className="btn btn-primary btn-lg"
+                onClick={() => setModalShow(true)}
+              >
+                Free Consultation
+              </button>
+            </div>
+
             <ContactUsModel
               show={modalShow}
               onHide={() => setModalShow(false)}
