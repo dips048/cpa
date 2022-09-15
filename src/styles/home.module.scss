@@ -94,6 +94,7 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .globe {
+    height: 800px;
     width: 800px;
   }
 
@@ -101,6 +102,7 @@
   .globe-2,
   .globe-3,
   .globe-4 {
+    height: 800px;
     width: 800px;
   }
 }

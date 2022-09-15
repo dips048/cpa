@@ -40,7 +40,7 @@ const List = ({ menuLinks, onShow, onNlshow }) => {
         </span>
       </div>
 
-      <Offcanvas show={show} onHide={handleClose} backdrop={true} responsive="lg">
+      <Offcanvas show={show} onHide={handleClose} placement={"end"} backdrop={true} responsive="lg">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
