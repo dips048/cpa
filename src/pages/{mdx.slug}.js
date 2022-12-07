@@ -9,6 +9,7 @@ import { Container } from "react-bootstrap"
 import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import ContactUsModel from "../components/contact-us-modal"
+import FormPage from "../components/formPage"
 
 const Page = ({ data }) => {
   const [modalShow, setModalShow] = useState(false)
@@ -22,67 +23,55 @@ const Page = ({ data }) => {
             {" "}
             <MDXRenderer>{data.mdx.body}</MDXRenderer>
             {data.mdx.frontmatter.useForm && (
-              <div className="mx-auto" style={{ maxWidth: "400px" }}>
-                <form>
-                  <div className="mb-3">
-                    <label htmlFor="name" className="form-label">
-                      Name
-                    </label>
-                    <input type="text" id="name" className="form-control" />
-                  </div>
-                  <div className="mb-3">
-                    <label htmlFor="email" className="form-label">
-                      Email address
-                    </label>
-                    <input type="email" id="email" className="form-control" />
-                  </div>
-                  <div className="mb-3">
-                    <label htmlFor="pNumber" className="form-label">
-                      Phone Number
-                    </label>
-                    <input type="text" id="pNumber" className="form-control" />
-                  </div>
-                  <div className="mb-3">
-                    <label htmlFor="callTime" className="form-label">
-                      Best Time To Call
-                    </label>
-                    <input
-                      type="email"
-                      id="callTime"
-                      className="form-control"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label htmlFor="comments">Comments</label>
-                    <textarea
-                      id="comments"
-                      className="form-control"
-                      placeholder="Leave a comment here"
-                    ></textarea>
-                  </div>
-                  {/* <div className="mb-3 form-check">
-                    <input
-                      type="checkbox"
-                      id="checkBox"
-                      className="form-check-input"
-                    />
-                    <label className="form-check-label" htmlFor="checkBox">
-                      CAPTCHA Image
-                    </label>
-                  </div>
-                  <div className="mb-3">
-                    <input type="" className="form-control" />
-                  </div> */}
-                  <div className="d-flex justify-content-end">
-                    {/* <a id="captcha_refresh" href="?">
-                      [ Show a different Image ]
-                    </a> */}
-                    <button type="submit" className="btn btn-primary">
-                      Send
-                    </button>
-                  </div>
-                </form>
-              </div>
+              <FormPage />
+              // <div className="mx-auto" style={{ maxWidth: "400px" }}>
+              //   <form action="https://formsubmit.co/dp150330@gmail.com" method="POST">
+              //     <div className="mb-3">
+              //       <label htmlFor="name" className="form-label">
+              //         Name
+              //       </label>
+              //       <input name="name" type="text" id="name" className="form-control" />
+              //     </div>
+              //     <div className="mb-3">
+              //       <label htmlFor="email" className="form-label">
+              //         Email address
+              //       </label>
+              //       <input name="email" type="email" id="email" className="form-control" />
+              //     </div>
+              //     <div className="mb-3">
+              //       <label htmlFor="pNumber" className="form-label">
+              //         Phone Number
+              //       </label>
+              //       <input name="phone" type="text" id="pNumber" className="form-control" />
+              //     </div>
+              //     <div className="mb-3">
+              //       <label htmlFor="callTime" className="form-label">
+              //         Best Time To Call
+              //       </label>
+              //       <input
+              //         name="callTime"
+              //         type="text"
+              //         id="callTime"
+              //         className="form-control"
+              //       />
+              //     </div>
+              //     <div className="mb-3">
+              //       <label htmlFor="comments">Comments</label>
+              //       <textarea
+              //         name="comments"
+              //         id="comments"
+              //         className="form-control"
+              //         placeholder="Leave a comment here"
+              //       ></textarea>
+              //     </div>
+              //     <input type="hidden" name="_next" value="/services/services-for-individuals"></input>
+              //     <div className="d-flex justify-content-end">
+              //       <button type="submit" className="btn btn-primary">
+              //         Send
+              //       </button>
+              //     </div>
+              //   </form>
+              // </div>
             )}
           </div>
           <div className="col-lg-1"></div>
