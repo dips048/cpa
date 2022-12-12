@@ -109,11 +109,6 @@ const FormPage = () => {
       </div>
     </form>
   )
-  const thankYou = (
-    <div>
-      <h1>Thank you! We will contact you soon</h1>
-    </div>
-  )
   return (
     <div className="mx-auto" style={{ maxWidth: "400px" }}>
       {showForm}

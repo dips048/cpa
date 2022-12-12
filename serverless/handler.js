@@ -11,7 +11,7 @@ module.exports.sendMail = (event, context) => {
   let bccEmailAddresses = event.body.bccEmailAddresses;
   let ccEmailAddresses = event.body.ccEmailAddresses;
   let toEmailAddresses = event.body.toEmailAddresses;
-  let bodyData = event.body.bodyData;
+  const { name, email, phone, comments } =  event.body.bodyData;
   let bodyCharset = event.body.bodyCharset;
   let subjectdata = event.body.subjectdata;
   let subjectCharset = event.body.subjectCharset;
@@ -28,7 +28,7 @@ module.exports.sendMail = (event, context) => {
     Message: {
       Body: {
         Text: {
-          Data: bodyData,
+          Data: `name: ${name}\nemail: ${email}\nphone: ${phone}\ncomments: ${comments}`,
           Charset: bodyCharset
         }
       },
