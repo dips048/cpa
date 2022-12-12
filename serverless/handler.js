@@ -7,9 +7,7 @@ const AWS = require('aws-sdk');
 let ses = new AWS.SES();
 
 // The function to send SES email message
-module.exports.sendMail = (event, context, callback) => {
-  console.log("SES successful", event);
-
+module.exports.sendMail = (event, context) => {
   let bccEmailAddresses = event.body.bccEmailAddresses;
   let ccEmailAddresses = event.body.ccEmailAddresses;
   let toEmailAddresses = event.body.toEmailAddresses;
@@ -51,16 +49,12 @@ module.exports.sendMail = (event, context, callback) => {
     }),
   };
 
-// The sendEmail function taking the emailParams and sends the email requests.
-  ses.sendEmail(emailParams, function (err, data) {
-      if (err) {
-          console.log("error", err, err.stack);
-          callback(err);
-      } else {
-        console.log("SES successful");
-        console.log(data);
-        callback(null, response);
-        context.done(null, response)
-      }
+  // The sendEmail function taking the emailParams and sends the email requests.
+  ses.sendEmail(emailParams, err => {
+    if (err) {
+      context.fail(err.stack, 'Internal error!');
+    } else {
+      context.done(null, 'Email sent', response);
+    }
   });
 };

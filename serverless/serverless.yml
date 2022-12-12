@@ -5,9 +5,15 @@ provider:
   runtime: nodejs14.x
   stage: dev
   region: us-east-1
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action: 'ses:*'
+          Resource: '*'
 
 functions:
- sendMail:
+  sendMail:
     handler: handler.sendMail
     description: Send email using SES service.
     memorySize: 1024
