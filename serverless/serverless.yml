@@ -1,0 +1,32 @@
+service: contact-us-sls
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action: 'ses:*'
+          Resource: '*'
+
+functions:
+  sendMail:
+    handler: handler.sendMail
+    description: Send email using SES service.
+    memorySize: 1024
+    timeout: 5
+    events:
+      - http:
+          path: sendMail
+          method: post
+          integration: lambda
+          cors: true
+          response:
+            headers:
+              Access-Control-Allow-Origin: "'*'"
+
+plugins:
+  - serverless-offline

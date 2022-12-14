@@ -11,23 +11,30 @@ const FormPage = () => {
     reset,
     setError,
   } = useForm()
-  const URL =
-    "https://0yvxpsbh4b.execute-api.us-east-1.amazonaws.com/production/contact_us"
+  const URL="https://39oheyu6ui.execute-api.us-east-1.amazonaws.com/dev/sendMail"
   const onSubmit = async data => {
     console.log("formData", data)
     try {
       await fetch(URL, {
         method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          bccEmailAddresses: [],
+          ccEmailAddresses: [],
+          toEmailAddresses: ["dp150330@gmail.com"],
+          bodyData: JSON.stringify(data),
+          bodyCharset: "UTF-8",
+          subjectdata: "AWS SES",
+          subjectCharset: "UTF-8",
+          sourceEmail: "dipeshpatel048@gmail.com",
+          replyToAddresses: ["dipeshpatel048@gmail.com"],
+        }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Credentials": "true",
           "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
           "Access-Control-Allow-Headers":
-            "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+          "Origin, X-Requested-With, Content-Type, Accept, Authorization",
         },
       })
       setSuccess(true)
@@ -114,9 +121,6 @@ const FormPage = () => {
         </button>
       </div>
     </form>
-  )
-  const thankYou = (
-    <div><h1>Thank you! We will contact you soon</h1></div>
   )
   return (
     <div className="mx-auto" style={{ maxWidth: "400px" }}>
