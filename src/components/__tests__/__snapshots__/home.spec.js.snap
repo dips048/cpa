@@ -48,7 +48,7 @@ exports[`Home renders correctly 1`] = `
           className="col-lg-12"
         >
           <h1>
-            Company Name, Accounting
+            CPA Solutions, Accounting
           </h1>
           <p>
             If you are looking for a blend of personal service and expertise, you have come to the right place! We offer a broad range of services for business owners, executives and independent professionals. Our rates are affordable. We are experienced and friendly.
@@ -277,7 +277,7 @@ exports[`Home renders correctly 1`] = `
             <p
               className="lead"
             >
-              Company Name is licensed in VT and specializes in Accounting. We offer a broad range of services for business owners, executives, and independent professionals. We are professional, experienced, and affordable.
+              CPA Solutions is licensed in VT and specializes in Accounting. We offer a broad range of services for business owners, executives, and independent professionals. We are professional, experienced, and affordable.
             </p>
             <p
               className="lead"

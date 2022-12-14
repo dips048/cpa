@@ -530,6 +530,14 @@ module.exports = {
     //   options: {
     //     lang: 'en'
     //   }
-    // }
+    // },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "cpaaws",
+        protocol: "https",
+        hostname: "www.example.com",
+    },
+    },
   ],
 }

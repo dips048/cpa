@@ -10,6 +10,24 @@ import CallLink from "./callLink"
 const Header = ({ companyName, menuLinks }) => {
   const [modalShow, setModalShow] = useState(false)
   const [newsletterModal, setNewsletterModal] = useState(false)
+  const linksObj = JSON.parse(JSON.stringify(menuLinks))
+  const links = linksObj.map(i => {
+    if (i.subLinks && i.subLinks.length) {
+      i.subLinks = i.subLinks.map(j => {
+        j.subLinks = j.subLinks.map(k => {
+          k.subLinks = k.subLinks.map(l => {
+            l.url = i.url + j.url + k.url + l.url
+            return l
+          })
+          k.url = i.url + j.url + k.url
+          return k
+        })
+        j.url = i.url + j.url
+        return j
+      })
+    }
+    return i
+  })
 
   return (
     <React.Fragment>
@@ -18,7 +36,7 @@ const Header = ({ companyName, menuLinks }) => {
         nlShow={newsletterModal}
         onShow={() => setModalShow(true)}
         onNlshow={() => setNewsletterModal(true)}
-        menuLinks={menuLinks}
+        menuLinks={links}
       ></List>
       <Container className="d-none d-lg-flex justify-content-lg-between py-2">
         <div>
