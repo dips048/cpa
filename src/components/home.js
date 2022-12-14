@@ -87,7 +87,7 @@ const Home = () => {
         <Container style={{ zIndex: 1 }}>
           <div className="row pt-5">
             <div className="col-lg-12">
-              <h1>Company Name, Accounting</h1>
+              <h1>CPA Company, Accounting</h1>
               <p>
                 If you are looking for a blend of personal service and
                 expertise, you have come to the right place! We offer a broad
@@ -190,7 +190,7 @@ const Home = () => {
               </div>
               <div className="col-lg-6 order-lg-1">
                 <p className="lead">
-                  Company Name is licensed in VT and specializes in Accounting.
+                  CPA Company is licensed in VT and specializes in Accounting.
                   We offer a broad range of services for business owners,
                   executives, and independent professionals. We are
                   professional, experienced, and affordable.

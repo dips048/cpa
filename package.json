@@ -15,7 +15,8 @@
     "test-coverage": "jest --coverage",
     "cy:open": "cypress open",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
+    "deploy": "gatsby build && gatsby-plugin-s3 deploy"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
@@ -33,6 +34,7 @@
     "gatsby-plugin-image": "^2.20.0",
     "gatsby-plugin-mdx": "^3.19.0",
     "gatsby-plugin-netlify": "^5.0.1",
+    "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sass": "^5.19.0",
     "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^4.20.0",
@@ -66,5 +68,9 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "engines": {
+    "node": ">=0.10.3 <15",
+    "npm": ">=1.0.20"
   }
 }
