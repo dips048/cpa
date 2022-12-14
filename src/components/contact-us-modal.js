@@ -1,13 +1,14 @@
 import * as React from "react"
-import Button from "react-bootstrap/Button"
+// import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"
-import Form from "react-bootstrap/Form"
+// import Form from "react-bootstrap/Form"
+import FormPage from "./formPage"
 
 const ContactUsModel = props => {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -15,7 +16,8 @@ const ContactUsModel = props => {
         <Modal.Title id="contained-modal-title-vcenter">Contact Us</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form>
+        <FormPage />
+        {/* <Form>
         <Form.Group className="mb-3" controlId="loginForm.ControlInput1">
             <Form.Label>Name</Form.Label>
             <Form.Control
@@ -36,11 +38,11 @@ const ContactUsModel = props => {
             <Form.Label>Comments</Form.Label>
             <Form.Control type="textArea" />
           </Form.Group>
-        </Form>
+        </Form> */}
       </Modal.Body>
-      <Modal.Footer>
+      {/* <Modal.Footer>
         <Button onClick={props.onHide}>Send</Button>
-      </Modal.Footer>
+      </Modal.Footer> */}
     </Modal>
   )
 }
