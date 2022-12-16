@@ -1,40 +1,50 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import Home from "../home"
-import { render, fireEvent } from "@testing-library/react"
+import List from "../list"
 import TestRenderer from "react-test-renderer"
-import ContactUsModel from "../contact-us-modal"
-import CallLink from "../callLink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Offcanvas from "react-bootstrap/Offcanvas"
+import CallLink from "../callLink"
+import { render, fireEvent } from "@testing-library/react"
 
-describe("Home", () => {
+describe("List", () => {
+
+  beforeAll(() => {
+    Object.defineProperty(window, "matchMedia", {
+      writable: true,
+      value: jest.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(), // Deprecated
+        removeListener: jest.fn(), // Deprecated
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      }))
+    });
+  });
+
   it("renders correctly", () => {
-    const tree = renderer
-      .create(<Home />)
-      .toJSON()
+    const tree = renderer.create(<List />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
-  test("renders `FontAwesomeIcon`, `ContactUsModel`, `CallLink` components", () => {
-    const testRenderer = TestRenderer.create(
-      <Home />
-    )
+  test("should renders `FontAwesomeIcon` & `CallLink' components", () => {
+    const testRenderer = TestRenderer.create(<List />)
     const testInstance = testRenderer.root
     expect(testInstance.findAllByType(FontAwesomeIcon).length).toEqual(4)
-    expect(testInstance.findByType(ContactUsModel)).toBeTruthy()
-    expect(testInstance.findAllByType(CallLink).length).toEqual(1)
+    expect(testInstance.findByType(CallLink)).toBeTruthy()
+    expect(testInstance.findByType(Offcanvas)).toBeTruthy()
   })
-  
-  test("on clicking `Free Consultation` it should open Free Consultation modal", () => {
-    const { getByText, getByRole } = render(
-      <Home />
+
+  test("on clicking `Menu button` it should open off canvas", () => {
+    const { getByText, getByTestId } = render(
+      <List menuLinks={[]} comapanyName={"MyCompany"} />
     )
-    const freeConsultation = getByText("Free Consultation")
-    expect(freeConsultation).toBeInTheDocument()
-    fireEvent.click(freeConsultation);
-    expect(getByRole("dialog")).toBeInTheDocument();
-    const sendButton = getByText("Send");
-    fireEvent.click(sendButton);
+    const menuButton = getByTestId("fa-icon-menu")
+    expect(menuButton).toBeInTheDocument()
+    fireEvent.click(menuButton);
+    expect(getByText("Menu")).toBeInTheDocument();
   })
 })
-

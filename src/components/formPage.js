@@ -11,33 +11,24 @@ const FormPage = () => {
     reset,
     setError,
   } = useForm()
-  const URL="https://39oheyu6ui.execute-api.us-east-1.amazonaws.com/dev/sendMail"
+  const URL = "https://3ct3mrc87g.execute-api.us-east-1.amazonaws.com/dev/sendMail"
   const onSubmit = async data => {
     console.log("formData", data)
     try {
       await fetch(URL, {
         method: "POST",
         body: JSON.stringify({
-          bccEmailAddresses: [],
-          ccEmailAddresses: [],
-          toEmailAddresses: ["dp150330@gmail.com"],
-          bodyData: JSON.stringify(data),
+          bodyData: data,
           bodyCharset: "UTF-8",
           subjectdata: "AWS SES",
           subjectCharset: "UTF-8",
-          sourceEmail: "dipeshpatel048@gmail.com",
-          replyToAddresses: ["dipeshpatel048@gmail.com"],
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Credentials": "true",
-          "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
-          "Access-Control-Allow-Headers":
-          "Origin, X-Requested-With, Content-Type, Accept, Authorization",
         },
+      }).then(() => {
+        setSuccess(true)
       })
-      setSuccess(true)
     } catch (error) {
       console.log("Errors:", error)
       setError("submit", "submitError", `Doh! ${error.message}`)
@@ -57,6 +48,7 @@ const FormPage = () => {
           type="text"
           name="name"
           id="name"
+          data-testid="name"
           className="form-control"
           placeholder="Enter your name"
           {...register("name", { required: "Name is required." })}
@@ -87,15 +79,19 @@ const FormPage = () => {
         </label>
         <input
           name="phone"
-          type="number"
+          type="text"
           id="phone"
           className="form-control"
           placeholder="Enter phone number"
-          {...register("phone", { required: "Phone number is required." })}
+          {...register("phone", { required: "Phone number is required.", pattern: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ })}
           aria-invalid={errors.phone ? "true" : "false"}
         />
-        {errors.phone && (
+        {errors.phone && (<>
           <div className={formError}>{errors.phone?.message}</div>
+          {errors.phone?.type === 'pattern' && <div className={formError}>
+            Enter valid phone number.
+          </div>}
+        </>
         )}
       </div>
       <div className="mb-3">
@@ -107,7 +103,7 @@ const FormPage = () => {
           placeholder="Leave a comment here"
           {...register("comments")}
           aria-invalid={errors.comments ? "true" : "false"}
-          ></textarea>
+        ></textarea>
         {errors.comments && (
           <div className={formError}>{errors.comments?.message}</div>
         )}
@@ -116,7 +112,7 @@ const FormPage = () => {
         <button type="button" className="btn btn-secondary mx-1" onClick={onReset}>
           reset
         </button>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" data-testid="submit" className="btn btn-primary">
           Send
         </button>
       </div>

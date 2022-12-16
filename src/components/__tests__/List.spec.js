@@ -8,6 +8,23 @@ import CallLink from "../callLink"
 import { render, fireEvent } from "@testing-library/react"
 
 describe("List", () => {
+
+  beforeAll(() => {
+    Object.defineProperty(window, "matchMedia", {
+      writable: true,
+      value: jest.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(), // Deprecated
+        removeListener: jest.fn(), // Deprecated
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      }))
+    });
+  });
+
   it("renders correctly", () => {
     const tree = renderer.create(<List />).toJSON()
     expect(tree).toMatchSnapshot()
@@ -16,7 +33,7 @@ describe("List", () => {
   test("should renders `FontAwesomeIcon` & `CallLink' components", () => {
     const testRenderer = TestRenderer.create(<List />)
     const testInstance = testRenderer.root
-    expect(testInstance.findAllByType(FontAwesomeIcon).length).toEqual(5)
+    expect(testInstance.findAllByType(FontAwesomeIcon).length).toEqual(4)
     expect(testInstance.findByType(CallLink)).toBeTruthy()
     expect(testInstance.findByType(Offcanvas)).toBeTruthy()
   })
